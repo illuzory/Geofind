@@ -23,3 +23,10 @@ Natural Earth 1:10m — картографически обобщённая ге
 - jQuery 3.7.1: https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js . Лицензия MIT: `assets/jquery.LICENSE`.
 
 Файлы загружены по HTTPS с проверкой TLS, сохранены локально и встроены в HTML. Подложка CartoDB опциональна; по умолчанию выключена. Никакой внешний CDN или геокодер для автономной карты не нужен.
+
+
+## Проверенный OSRM
+
+Автомобильная маршрутизация: https://router.project-osrm.org , публичный demo FOSSGIS/OSRM. Дорожные данные — © OpenStreetMap contributors, https://www.openstreetmap.org/copyright . Условия использования сервера: https://github.com/Project-OSRM/osrm-backend/wiki/Demo-server .
+
+Публичный сервер не сообщает версию графа и не гарантирует доступность/обновления. Наблюдения кэшируются с явным идентификатором OSRM_CACHE_NAMESPACE. Это версия наблюдения клиента, а не подтверждённая версия графа. Локальный дорожный сервер не установлен. Результаты реальной интеграционной проверки описаны в OSRM_VALIDATION.md.

@@ -5,6 +5,8 @@ import heapq
 import json
 import math
 import sqlite3
+import threading
+import time
 from dataclasses import dataclass
 from functools import lru_cache
 from itertools import pairwise
@@ -66,6 +68,9 @@ class DiskCache:
 
 
 class OSRMRouter:
+    _public_lock = threading.Lock()
+    _public_last_request = 0.0
+
     def __init__(self, url, version, cache_path, max_snap_m=3000, session=None):
         parsed = urlparse(url)
         if (
@@ -85,8 +90,9 @@ class OSRMRouter:
             raise RoutingError("Для удалённого OSRM используйте HTTPS")
         if not version.strip():
             raise RoutingError(
-                "Задайте OSRM_DATA_VERSION — идентификатор графа и профиля"
+                "Задайте OSRM_DATA_VERSION для своего графа или OSRM_CACHE_NAMESPACE для наблюдения публичного demo"
             )
+        self.public_demo = parsed.hostname == "router.project-osrm.org"
         self.url = url.rstrip("/")
         self.version = version
         self.max_snap_m = max_snap_m
@@ -94,7 +100,7 @@ class OSRMRouter:
         self.session = session or requests.Session()
         if session is None:
             retry = Retry(
-                total=2,
+                total=0 if self.public_demo else 2,
                 backoff_factor=0.3,
                 status_forcelist=[429, 502, 503, 504],
                 allowed_methods=["GET"],
@@ -102,12 +108,19 @@ class OSRMRouter:
             self.session.mount("https://", HTTPAdapter(max_retries=retry))
             self.session.mount("http://", HTTPAdapter(max_retries=retry))
         self.fingerprint = hashlib.sha256(
-            f"{self.url}|{version}|driving|{max_snap_m}".encode()
+            f"{self.url}|{version}|driving|{max_snap_m}|checked-waypoints-v2".encode()
         ).hexdigest()
 
     def _get(self, kind, points, params):
         coords = ";".join(f"{lon:.7f},{lat:.7f}" for lat, lon in points)
         try:
+            if self.public_demo:
+                # Official public demo policy: no more than one request/second.
+                with OSRMRouter._public_lock:
+                    pause = 1.05 - (time.monotonic() - OSRMRouter._public_last_request)
+                    if pause > 0:
+                        time.sleep(pause)
+                    OSRMRouter._public_last_request = time.monotonic()
             response = self.session.get(
                 f"{self.url}/{kind}/v1/driving/{coords}", params=params, timeout=(3, 30)
             )
@@ -147,7 +160,10 @@ class OSRMRouter:
                     "sources": "0",
                     "destinations": ";".join(str(i) for i in range(1, len(points))),
                     "annotations": "duration",
-                    "radiuses": ";".join([str(self.max_snap_m)] * len(points)),
+                    # A strict radius here makes one unsnappable grid point
+                    # fail the whole matrix. Validate returned snap distances
+                    # individually instead, preserving the same 3 km limit.
+                    "skip_waypoints": "false",
                 },
             )
             matrix = payload.get("durations")
@@ -161,8 +177,31 @@ class OSRMRouter:
                 raise RoutingError(
                     "OSRM вернул неполную матрицу. Итоговое назначение не сформировано."
                 )
+            sources = payload.get("sources")
+            targets = payload.get("destinations")
+            if (
+                not isinstance(sources, list)
+                or len(sources) != 1
+                or not isinstance(targets, list)
+                or len(targets) != len(indices)
+            ):
+                raise RoutingError("OSRM не вернул полные данные привязки к дорогам")
+
+            def snap_distance(waypoint):
+                value = waypoint.get("distance") if isinstance(waypoint, dict) else None
+                if (
+                    isinstance(value, bool)
+                    or not isinstance(value, (int, float))
+                    or not math.isfinite(value)
+                    or value < 0
+                ):
+                    raise RoutingError("OSRM вернул некорректную привязку к дороге")
+                return value
+
+            origin_gap = snap_distance(sources[0])
+            target_gaps = [snap_distance(target) for target in targets]
             rows = []
-            for index, seconds in zip(indices, matrix[0]):
+            for index, seconds, target_gap in zip(indices, matrix[0], target_gaps):
                 if seconds is not None and (
                     isinstance(seconds, bool)
                     or not isinstance(seconds, (int, float))
@@ -170,9 +209,12 @@ class OSRMRouter:
                     or seconds < 0
                 ):
                     raise RoutingError("OSRM вернул некорректное время")
+                too_far = origin_gap > self.max_snap_m or target_gap > self.max_snap_m
                 value = {
-                    "seconds": seconds,
-                    "state": "ok" if seconds is not None else "no_route",
+                    "seconds": None if too_far else seconds,
+                    "state": "off_network"
+                    if too_far
+                    else ("ok" if seconds is not None else "no_route"),
                 }
                 values[index] = value
                 rows.append((keys[index], value))

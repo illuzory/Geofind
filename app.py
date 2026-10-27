@@ -55,6 +55,14 @@ def calculate(mode, speed, url, version, services, sites, step, thresholds, dela
     router = demo_router(speed) if mode == "demo" else osrm_router(url, version)
     started = perf_counter()
     grid = grid_for(step)
+    if (
+        mode == "osrm"
+        and router.public_demo
+        and (len(grid.cells) > 1000 or len(services) > 3)
+    ):
+        raise RoutingError(
+            "Публичный OSRM: до 1000 ячеек и 3 сервисов. Выберите шаг 20/40 км; для большей нагрузки нужен собственный сервер."
+        )
     results, assignments = analyze(router, services, sites, grid, thresholds, delay)
     return (
         results,
@@ -125,7 +133,15 @@ def main():
             help="Условная дополнительная точка в выбранном городе. Проверяет эффект расширения сервиса.",
         )
         mode_label = st.selectbox(
-            "Расчёт времени", ["Демо · дорожная модель", "OSRM · автомобильный маршрут"]
+            "Расчёт времени",
+            ["Демо · дорожная модель", "OSRM · автомобильный маршрут"],
+            index=1
+            if os.environ.get("OSRM_URL")
+            and (
+                os.environ.get("OSRM_DATA_VERSION")
+                or os.environ.get("OSRM_CACHE_NAMESPACE")
+            )
+            else 0,
         )
         mode = "demo" if mode_label.startswith("Демо") else "osrm"
         speed = st.slider(
@@ -190,7 +206,9 @@ def main():
             "OSRM: время по автомобильному графу. Координаты MVP остаются условными; текущие пробки не учитываются."
         )
     url = os.environ.get("OSRM_URL", "http://127.0.0.1:5000")
-    version = os.environ.get("OSRM_DATA_VERSION", "")
+    version = os.environ.get("OSRM_DATA_VERSION") or os.environ.get(
+        "OSRM_CACHE_NAMESPACE", ""
+    )
     if mode == "osrm":
         signature = hashlib.sha256(
             repr(
@@ -210,7 +228,7 @@ def main():
             st.session_state.osrm_signature = signature
         if st.session_state.get("osrm_signature") != signature:
             st.caption(
-                "Нажмите «Рассчитать дорожный сценарий». Настройка подключения описана во вкладке «Методика» ниже."
+                "Нажмите «Рассчитать дорожный сценарий», чтобы получить времена и зоны покрытия."
             )
             with st.expander("Подключение OSRM"):
                 st.code(
@@ -384,7 +402,8 @@ def main():
             ]
         ].copy()
         export["calculation_mode"] = mode
-        export["is_demo_coordinates"] = True
+        export["is_demo_coordinates"] = results.is_demo
+        export["routing_version"] = version if mode == "osrm" else router.fingerprint
         export["data_version"] = data.fingerprint
         a, b = st.columns(2)
         a.download_button(
@@ -437,7 +456,7 @@ def main():
 
 **Демо-модель.** Natural Earth 1:10m — обобщённые дороги, единая выбранная скорость, оба направления и плоские пересечения. Подъезд от точки до дороги моделируется по прямой при 20 км/ч, максимум 25 км. Нет пути в этой модели не доказывает отсутствие реальной дороги. Ни одна оценка не является обещанием SLA.
 
-**OSRM.** Полноценный автомобильный профиль подключается через настройки среды `OSRM_URL` и `OSRM_DATA_VERSION`. Нужен граф области и соседних дорог; привязка ограничена 3 км. Кэш учитывает граф, профиль, координаты и направление. Ошибки API останавливают расчёт и не превращаются в «нет пути».
+**OSRM.** Подключение задаётся через `OSRM_URL` и `OSRM_DATA_VERSION` (версия своего графа) либо `OSRM_CACHE_NAMESPACE` (идентификатор наблюдения публичного demo). Публичный сервер не сообщает версию графа и не гарантирует стабильность; запросы ограничены одним в секунду. Нужен граф области и соседних дорог; привязка ограничена 3 км и проверяется по возвращённому расстоянию для каждой точки отдельно. Кэш учитывает граф, профиль, координаты и направление. Ошибки API останавливают расчёт и не превращаются в «нет пути».
 
 **Обновление.** Скачайте книгу, измените листы Equipment, Sites, Services и загрузите её слева. Только валидная книга заменит текущие данные. Изменение оборудования не меняет дорожные времена. Уникальные названия связывают оборудование с площадками. Координаты этой версии выбраны для демонстрации; адрес на Буторина не геокодирован.
 

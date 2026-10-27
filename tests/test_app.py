@@ -31,3 +31,23 @@ def test_no_service_and_invalid_thresholds_are_handled():
     find(app.number_input, "В SLA, часов").set_value(10).run()
     assert not app.exception
     assert any("Пороги" in x.value for x in app.error)
+
+
+def test_configured_osrm_waits_for_click_and_limits_public_grid(monkeypatch):
+    import requests
+
+    monkeypatch.setenv("OSRM_URL", "https://router.project-osrm.org")
+    monkeypatch.setenv("OSRM_CACHE_NAMESPACE", "unit-test-observation")
+
+    def network_must_not_run(*args, **kwargs):
+        raise AssertionError("Unexpected live request in a unit test")
+
+    monkeypatch.setattr(requests.Session, "get", network_must_not_run)
+    app = AppTest.from_file(ROOT / "app.py", default_timeout=30).run()
+    assert not app.exception
+    assert find(app.selectbox, "Расчёт времени").value == "OSRM · автомобильный маршрут"
+    assert not app.metric
+    find(app.select_slider, "Шаг покрытия, км").set_value(10).run()
+    find(app.button, "Рассчитать дорожный сценарий").click().run()
+    assert not app.exception
+    assert any("Публичный OSRM" in x.value for x in app.error)

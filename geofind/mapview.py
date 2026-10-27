@@ -153,9 +153,14 @@ def build_map(
             ]
         )
     folium.LayerControl(collapsed=True).add_to(m)
+    method = (
+        "OSRM · © OpenStreetMap contributors, без пробок"
+        if route and route.note.startswith("OSRM")
+        else "Модель Natural Earth"
+    )
     m.get_root().html.add_child(
         Element(
-            '<div style="position:fixed;bottom:8px;left:8px;background:white;padding:5px 8px;border-radius:4px;z-index:999;font:11px Arial">Условные площадки · Natural Earth, public domain · граница: Natural Earth</div>'
+            f'<div style="position:fixed;bottom:8px;left:8px;background:white;padding:5px 8px;border-radius:4px;z-index:999;font:11px Arial">{method} · условные площадки · фон: Natural Earth</div>'
         )
     )
     return m

@@ -33,7 +33,14 @@ class Session:
 
 
 def test_osrm_direction_null_zero_and_persistent_cache(tmp_path):
-    session = Session({"code": "Ok", "durations": [[0, 1800, None]]})
+    session = Session(
+        {
+            "code": "Ok",
+            "durations": [[0, 1800, None]],
+            "sources": [{"distance": 1}],
+            "destinations": [{"distance": 1}] * 3,
+        }
+    )
     path = tmp_path / "cache.sqlite"
     router = OSRMRouter("http://localhost:5000", "graph-a", path, session=session)
     origin = (56.8, 60.6)
@@ -74,6 +81,7 @@ def test_osrm_errors_are_not_cached(tmp_path):
         {"code": "Ok", "durations": [[1]]},
         {"code": "Ok", "durations": [None]},
         {"code": "Ok", "durations": [[True, None]]},
+        {"code": "Ok", "durations": [[1, 2]]},
         {"code": "NoSegment"},
         {"code": "Ok", "durations": [[-1, None]]},
         {"code": "Ok", "durations": [[float("nan"), 1]]},
@@ -120,3 +128,80 @@ def test_demo_path_uses_roads_and_matches_table():
     assert len(route.coordinates) > 20
     assert router.table(origin, [origin])[0].seconds == 0
     assert router.table(origin, [(0, 0)])[0].state == "off_network"
+
+
+def test_osrm_filters_far_snaps_without_losing_valid_grid_nodes(tmp_path):
+    response = Session(
+        {
+            "code": "Ok",
+            "durations": [[100, 200, None]],
+            "sources": [{"distance": 2}],
+            "destinations": [{"distance": 1}, {"distance": 3001}, {"distance": 3000}],
+        }
+    )
+    router = OSRMRouter(
+        "http://localhost:5000", "a", tmp_path / "c.db", session=response
+    )
+    values = router.table((56, 60), [(57, 61), (58, 62), (59, 63)])
+    assert [(v.seconds, v.state) for v in values] == [
+        (100, "ok"),
+        (None, "off_network"),
+        (None, "no_route"),
+    ]
+    assert "radiuses" not in response.calls[0][1]["params"]
+    assert response.calls[0][1]["params"]["skip_waypoints"] == "false"
+
+
+def test_osrm_far_origin_is_not_allowed_to_assign_territory(tmp_path):
+    response = Session(
+        {
+            "code": "Ok",
+            "durations": [[100]],
+            "sources": [{"distance": 3001}],
+            "destinations": [{"distance": 1}],
+        }
+    )
+    router = OSRMRouter(
+        "http://localhost:5000", "a", tmp_path / "c.db", session=response
+    )
+    values = router.table((56, 60), [(57, 61)])
+    assert values[0].seconds is None and values[0].state == "off_network"
+
+
+@pytest.mark.parametrize("distance", [None, -1, float("nan"), True, "10"])
+def test_osrm_rejects_invalid_snap_metadata(tmp_path, distance):
+    response = Session(
+        {
+            "code": "Ok",
+            "durations": [[100]],
+            "sources": [{"distance": 1}],
+            "destinations": [{"distance": distance}],
+        }
+    )
+    router = OSRMRouter(
+        "http://localhost:5000", "a", tmp_path / "c.db", session=response
+    )
+    with pytest.raises(RoutingError, match="привязку"):
+        router.table((56, 60), [(57, 61)])
+
+
+def test_public_demo_throttles_requests(monkeypatch, tmp_path):
+    from geofind import routing
+
+    response = Session(
+        {
+            "code": "Ok",
+            "routes": [
+                {"duration": 10, "geometry": {"coordinates": [[60, 56], [61, 57]]}}
+            ],
+        }
+    )
+    monkeypatch.setattr(OSRMRouter, "_public_last_request", 10.0)
+    monkeypatch.setattr(routing.time, "monotonic", lambda: 10.2)
+    waits = []
+    monkeypatch.setattr(routing.time, "sleep", waits.append)
+    router = OSRMRouter(
+        "https://router.project-osrm.org", "a", tmp_path / "c.db", session=response
+    )
+    router.route((56, 60), (57, 61))
+    assert waits == pytest.approx([0.85])
