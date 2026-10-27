@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+.cache/
+artifacts/
+data/equipment_inventory_mvp.xlsx
+data/private/
+.streamlit/secrets.toml

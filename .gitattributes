@@ -1,0 +1,2 @@
+# Keep vendored upstream bytes and recognise their original CRLF endings.
+assets/* -text whitespace=cr-at-eol
