@@ -46,7 +46,7 @@ def build_map(
         Element(
             "<style>"
             + ROOT.joinpath("assets/leaflet.css").read_text()
-            + '\n.leaflet-container{background:#e9f0f4;font-family:Arial,sans-serif}.leaflet-control-layers-toggle{background-image:none!important}.leaflet-control-layers-toggle:after{content:"☷";font-size:26px;margin-left:8px}.service-dot{background:#173e63;color:white;border:3px solid white;border-radius:50%;box-shadow:0 1px 5px #40556c;text-align:center;font:bold 14px Arial;line-height:27px}.leaflet-popup-content{line-height:1.6}</style>'
+            + '\n.leaflet-container{background:#e9f0f4;font-family:Arial,sans-serif}.leaflet-control-layers-toggle{background-image:none!important}.leaflet-control-layers-toggle:after{content:"☷";font-size:26px;margin-left:8px}.service-dot{background:#173e63;color:white;border:3px solid white;border-radius:50%;box-shadow:0 1px 5px #40556c;text-align:center;font:bold 14px Arial;line-height:27px}.leaflet-popup-content{line-height:1.6}.city-label{background:rgba(255,255,255,.94);border:0;border-radius:5px;box-shadow:0 1px 5px #70809055;color:#17324d;font-weight:600;font-size:12px;padding:4px 7px;white-space:nowrap}.city-label:before{border-right-color:rgba(255,255,255,.94)!important}</style>'
         )
     )
     for name in ["leaflet.js", "jquery.js"]:
@@ -64,7 +64,7 @@ def build_map(
             "color": "#637e98",
             "weight": 1.5,
             "fillColor": "#f8fafb",
-            "fillOpacity": 0.8,
+            "fillOpacity": 0 if online_tiles else 0.8,
         },
     ).add_to(m)
     display_zones = {
@@ -130,7 +130,14 @@ def build_map(
             fill=True,
             fill_color=COLORS[row["status"]],
             fill_opacity=1,
-            tooltip=f"{_text(row['name'])} · {fmt_time(row.get('total_seconds'))}",
+            tooltip=folium.Tooltip(
+                _text(row["name"]),
+                permanent=True,
+                direction="right",
+                offset=(11, 0),
+                class_name="city-label",
+                sticky=False,
+            ),
             popup=folium.Popup(popup, max_width=340),
         ).add_to(clients)
     clients.add_to(m)
