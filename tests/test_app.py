@@ -51,3 +51,15 @@ def test_configured_osrm_waits_for_click_and_limits_public_grid(monkeypatch):
     find(app.button, "Рассчитать дорожный сценарий").click().run()
     assert not app.exception
     assert any("Публичный OSRM" in x.value for x in app.error)
+
+
+def test_new_regional_ui_separates_approval_and_checks_addresses(monkeypatch):
+    monkeypatch.setenv("GEOFIND_WORKBOOK", str(ROOT / "data/ural_inventory.xlsx"))
+    app = AppTest.from_file(ROOT / "app.py", default_timeout=30).run()
+    assert not app.exception
+    assert find(app.metric, "В SLA").value == "10 из 11"
+    assert find(app.metric, "По согласованию").value == "4"
+    find(app.button, "Проверить адреса").click().run()
+    assert not app.exception
+    assert len(app.session_state.address_report) == 16
+    assert {r["status"] for r in app.session_state.address_report} == {"verified"}

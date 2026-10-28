@@ -1,0 +1,3295 @@
+{
+  "provider": "OSM / Nominatim",
+  "license": "ODbL / © OpenStreetMap contributors",
+  "responses": {
+    "311aaca1f1a3e10cf88cf532bc009b6cf9efd4605c8248f84bf4061c208e7518": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Екатеринбург проспект Ленина 24а",
+      "candidates": [
+        {
+          "place_id": 419355075,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 38408615,
+          "lat": "56.8372302",
+          "lon": "60.5976276",
+          "category": "building",
+          "type": "government",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "24А, проспект Ленина, Форум-Сити, Ленинский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620014, Россия",
+          "address": {
+            "house_number": "24А",
+            "road": "проспект Ленина",
+            "quarter": "Форум-Сити",
+            "city_district": "Ленинский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620014",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8370354",
+            "56.8374290",
+            "60.5966202",
+            "60.5986606"
+          ]
+        },
+        {
+          "place_id": 200352417,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 324230714,
+          "lat": "56.8372314",
+          "lon": "60.5976380",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "24А, проспект Ленина, Форум-Сити, Ленинский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620014, Россия",
+          "address": {
+            "house_number": "24А",
+            "road": "проспект Ленина",
+            "quarter": "Форум-Сити",
+            "city_district": "Ленинский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620014",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8371171",
+            "56.8373414",
+            "60.5974550",
+            "60.5978246"
+          ]
+        },
+        {
+          "place_id": 200222470,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 3667312917,
+          "lat": "56.8372498",
+          "lon": "60.5975641",
+          "category": "amenity",
+          "type": "clock",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "amenity",
+          "name": "",
+          "display_name": "24А, проспект Ленина, Форум-Сити, Ленинский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620014, Россия",
+          "address": {
+            "house_number": "24А",
+            "road": "проспект Ленина",
+            "quarter": "Форум-Сити",
+            "city_district": "Ленинский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620014",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8371998",
+            "56.8372998",
+            "60.5975141",
+            "60.5976141"
+          ]
+        }
+      ]
+    },
+    "6e79fdcbda41c913301036f1c863b32d42bbdb7462698e55377fc53a4a22f840": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Нижний Тагил улица Пархоменко 1а",
+      "candidates": [
+        {
+          "place_id": 200407390,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 121573424,
+          "lat": "57.9069735",
+          "lon": "59.9698790",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 6.434500648503879e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "1А, улица Пархоменко, Выя, Ленинский район, Нижний Тагил, муниципальный округ Нижний Тагил, Свердловская область, Уральский федеральный округ, 622002, Россия",
+          "address": {
+            "house_number": "1А",
+            "road": "улица Пархоменко",
+            "suburb": "Выя",
+            "city_district": "Ленинский район",
+            "city": "Нижний Тагил",
+            "county": "муниципальный округ Нижний Тагил",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "622002",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.9068894",
+            "57.9070731",
+            "59.9689467",
+            "59.9708112"
+          ]
+        }
+      ]
+    },
+    "66124b2dbd735a049bacbfc80e453f383c4316613c1d63dafbb224b77919880b": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Каменск-Уральский улица Ленина 36",
+      "candidates": [
+        {
+          "place_id": 200364165,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 90115842,
+          "lat": "56.4156255",
+          "lon": "61.9129566",
+          "category": "amenity",
+          "type": "community_centre",
+          "place_rank": 30,
+          "importance": 6.0846112764126304e-05,
+          "addresstype": "amenity",
+          "name": "СКЦ",
+          "display_name": "СКЦ, 36, улица Ленина, Октябрьский, Синарский район, Каменск-Уральский, городской округ Каменск-Уральский, Свердловская область, Уральский федеральный округ, 623428, Россия",
+          "address": {
+            "amenity": "СКЦ",
+            "house_number": "36",
+            "road": "улица Ленина",
+            "suburb": "Октябрьский",
+            "city_district": "Синарский район",
+            "city": "Каменск-Уральский",
+            "county": "городской округ Каменск-Уральский",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623428",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4155009",
+            "56.4158295",
+            "61.9122025",
+            "61.9137107"
+          ]
+        }
+      ]
+    },
+    "983c51489228da95949c6725c7f707020febaab35bf157b6924007188614c4a1": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Серов улица Ленина 140",
+      "candidates": [
+        {
+          "place_id": 198427135,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 92667450,
+          "lat": "59.6046326",
+          "lon": "60.5828020",
+          "category": "building",
+          "type": "service",
+          "place_rank": 30,
+          "importance": 5.9526207370062066e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "140, улица Ленина, Старый посёлок, Серов, Серовский муниципальный округ, Свердловская область, Уральский федеральный округ, 624982, Россия",
+          "address": {
+            "house_number": "140",
+            "road": "улица Ленина",
+            "suburb": "Старый посёлок",
+            "city": "Серов",
+            "county": "Серовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624982",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "59.6045528",
+            "59.6047168",
+            "60.5823831",
+            "60.5832219"
+          ]
+        },
+        {
+          "place_id": 198423812,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 6355826885,
+          "lat": "59.6046937",
+          "lon": "60.5828179",
+          "category": "office",
+          "type": "government",
+          "place_rank": 30,
+          "importance": 5.9526207370062066e-05,
+          "addresstype": "office",
+          "name": "Администрация г. Серов",
+          "display_name": "Администрация г. Серов, 140, улица Ленина, Старый посёлок, Серов, Серовский муниципальный округ, Свердловская область, Уральский федеральный округ, 624982, Россия",
+          "address": {
+            "office": "Администрация г. Серов",
+            "house_number": "140",
+            "road": "улица Ленина",
+            "suburb": "Старый посёлок",
+            "city": "Серов",
+            "county": "Серовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624982",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "59.6046437",
+            "59.6047437",
+            "60.5827679",
+            "60.5828679"
+          ]
+        }
+      ]
+    },
+    "81eb01a52daa8bba9d755d60336de93569ea5fc5980fc994cdd02ef3e8d95de1": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Берёзовский Свердловская область улица Театральная 9",
+      "candidates": [
+        {
+          "place_id": 200233090,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 56016524,
+          "lat": "56.9092319",
+          "lon": "60.8138081",
+          "category": "office",
+          "type": "government",
+          "place_rank": 30,
+          "importance": 5.954604409852777e-05,
+          "addresstype": "office",
+          "name": "Администрация МО г.Берёзовский",
+          "display_name": "Администрация МО г.Берёзовский, 9, Театральная улица, Берёзовский, Берёзовский муниципальный округ, Свердловская область, Уральский федеральный округ, 623701, Россия",
+          "address": {
+            "office": "Администрация МО г.Берёзовский",
+            "house_number": "9",
+            "road": "Театральная улица",
+            "town": "Берёзовский",
+            "county": "Берёзовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623701",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9090809",
+            "56.9093829",
+            "60.8133659",
+            "60.8142504"
+          ]
+        }
+      ]
+    },
+    "c9694357ae7de6f54adc596c69eac8950c2c32df9aec737b3fa5dc4c3a05cbfd": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Ревда Свердловская область улица Цветников 21",
+      "candidates": [
+        {
+          "place_id": 200315013,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 132318635,
+          "lat": "56.8013260",
+          "lon": "59.9176139",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "21, улица Цветников, Центральный, Ревда, муниципальный округ Ревда, Свердловская область, Уральский федеральный округ, 623280, Россия",
+          "address": {
+            "house_number": "21",
+            "road": "улица Цветников",
+            "suburb": "Центральный",
+            "town": "Ревда",
+            "county": "муниципальный округ Ревда",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623280",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8011445",
+            "56.8015235",
+            "59.9174382",
+            "59.9178204"
+          ]
+        },
+        {
+          "place_id": 200273041,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 4412112389,
+          "lat": "56.8013809",
+          "lon": "59.9176482",
+          "category": "office",
+          "type": "government",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "office",
+          "name": "Администрация городского округа Ревда",
+          "display_name": "Администрация городского округа Ревда, 21, улица Цветников, Центральный, Ревда, муниципальный округ Ревда, Свердловская область, Уральский федеральный округ, 623280, Россия",
+          "address": {
+            "office": "Администрация городского округа Ревда",
+            "house_number": "21",
+            "road": "улица Цветников",
+            "suburb": "Центральный",
+            "town": "Ревда",
+            "county": "муниципальный округ Ревда",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623280",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8013309",
+            "56.8014309",
+            "59.9175982",
+            "59.9176982"
+          ]
+        }
+      ]
+    },
+    "91dfb659a985b738d48d89a5b723b9daeac12431b04fdba71a49e25c200bb745": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Первоуральск улица Ватутина 41",
+      "candidates": [
+        {
+          "place_id": 200164436,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 82009012,
+          "lat": "56.9050556",
+          "lon": "59.9419316",
+          "category": "amenity",
+          "type": "townhall",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "amenity",
+          "name": "Администрация городского округа Первоуральск",
+          "display_name": "Администрация городского округа Первоуральск, 41, улица Ватутина, Медгородок, Первоуральск, муниципальный округ Первоуральск, Свердловская область, Уральский федеральный округ, 623109, Россия",
+          "address": {
+            "amenity": "Администрация городского округа Первоуральск",
+            "house_number": "41",
+            "road": "улица Ватутина",
+            "suburb": "Медгородок",
+            "city": "Первоуральск",
+            "county": "муниципальный округ Первоуральск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623109",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9048655",
+            "56.9052383",
+            "59.9416554",
+            "59.9420692"
+          ]
+        }
+      ]
+    },
+    "e1342781c2d2125c268ade24e27d2126c6ea0bf920239c8eeba793ef938c2cfa": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Верхняя Пышма Успенский проспект 113",
+      "candidates": [
+        {
+          "place_id": 200133137,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 53059434,
+          "lat": "56.9772371",
+          "lon": "60.5586313",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "113, Успенский проспект, Верхняя Пышма, городской округ Верхняя Пышма, Свердловская область, Уральский федеральный округ, 624090, Россия",
+          "address": {
+            "house_number": "113",
+            "road": "Успенский проспект",
+            "town": "Верхняя Пышма",
+            "county": "городской округ Верхняя Пышма",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624090",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9770061",
+            "56.9774797",
+            "60.5579151",
+            "60.5593314"
+          ]
+        },
+        {
+          "place_id": 421929621,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 13971659471,
+          "lat": "56.9773983",
+          "lon": "60.5580568",
+          "category": "amenity",
+          "type": "dentist",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "amenity",
+          "name": "Стоматология",
+          "display_name": "Стоматология, 113, Успенский проспект, Верхняя Пышма, городской округ Верхняя Пышма, Свердловская область, Уральский федеральный округ, 624090, Россия",
+          "address": {
+            "amenity": "Стоматология",
+            "house_number": "113",
+            "road": "Успенский проспект",
+            "town": "Верхняя Пышма",
+            "county": "городской округ Верхняя Пышма",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624090",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9773483",
+            "56.9774483",
+            "60.5580068",
+            "60.5581068"
+          ]
+        },
+        {
+          "place_id": 421929644,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 13971693018,
+          "lat": "56.9773494",
+          "lon": "60.5582218",
+          "category": "shop",
+          "type": "fabric",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "shop",
+          "name": "Шторы",
+          "display_name": "Шторы, 113, Успенский проспект, Верхняя Пышма, городской округ Верхняя Пышма, Свердловская область, Уральский федеральный округ, 624090, Россия",
+          "address": {
+            "shop": "Шторы",
+            "house_number": "113",
+            "road": "Успенский проспект",
+            "town": "Верхняя Пышма",
+            "county": "городской округ Верхняя Пышма",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624090",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9772994",
+            "56.9773994",
+            "60.5581718",
+            "60.5582718"
+          ]
+        }
+      ]
+    },
+    "a1647f67155f2b99b0cab92bc88d7f9bcf81be52971ec2c9a33ec15bd848e390": {
+      "checked_at": "2026-10-28T06:05:36.455537+00:00",
+      "query": "Асбест улица Уральская 73",
+      "candidates": [
+        {
+          "place_id": 199780253,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 54933707,
+          "lat": "57.0128337",
+          "lon": "61.4685360",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.990768291747948e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "73, Уральская улица, Асбест, Асбестовский муниципальный округ, Свердловская область, Уральский федеральный округ, 624261, Россия",
+          "address": {
+            "house_number": "73",
+            "road": "Уральская улица",
+            "town": "Асбест",
+            "county": "Асбестовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624261",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.0126813",
+            "57.0129354",
+            "61.4681788",
+            "61.4688775"
+          ]
+        },
+        {
+          "place_id": 199574263,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 1214978714,
+          "lat": "57.0128596",
+          "lon": "61.4684726",
+          "category": "amenity",
+          "type": "townhall",
+          "place_rank": 30,
+          "importance": 5.990768291747948e-05,
+          "addresstype": "amenity",
+          "name": "Администрация Асбестовского ГО",
+          "display_name": "Администрация Асбестовского ГО, 73, Уральская улица, Асбест, Асбестовский муниципальный округ, Свердловская область, Уральский федеральный округ, 624261, Россия",
+          "address": {
+            "amenity": "Администрация Асбестовского ГО",
+            "house_number": "73",
+            "road": "Уральская улица",
+            "town": "Асбест",
+            "county": "Асбестовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624261",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.0128096",
+            "57.0129096",
+            "61.4684226",
+            "61.4685226"
+          ]
+        }
+      ]
+    },
+    "53ebf15cf43dcfcd4ff84eb84d0a249319d21c79ce1ea437737b5944fef1cafe": {
+      "checked_at": "2026-10-28T06:05:40.921006+00:00",
+      "query": "Полевской улица Ленина 2",
+      "candidates": [
+        {
+          "place_id": 199591743,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 96778427,
+          "lat": "56.4920731",
+          "lon": "60.2392221",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.917677576862772e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "2, улица Ленина, Ялунина, Полевской, Полевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623380, Россия",
+          "address": {
+            "house_number": "2",
+            "road": "улица Ленина",
+            "suburb": "Ялунина",
+            "town": "Полевской",
+            "county": "Полевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623380",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4917634",
+            "56.4922140",
+            "60.2390213",
+            "60.2397199"
+          ]
+        },
+        {
+          "place_id": 199607385,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 6243972588,
+          "lat": "56.4921145",
+          "lon": "60.2390657",
+          "category": "shop",
+          "type": "variety_store",
+          "place_rank": 30,
+          "importance": 5.917677576862772e-05,
+          "addresstype": "shop",
+          "name": "Fix Price",
+          "display_name": "Fix Price, 2, улица Ленина, Ялунина, Полевской, Полевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623380, Россия",
+          "address": {
+            "shop": "Fix Price",
+            "house_number": "2",
+            "road": "улица Ленина",
+            "suburb": "Ялунина",
+            "town": "Полевской",
+            "county": "Полевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623380",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4920645",
+            "56.4921645",
+            "60.2390157",
+            "60.2391157"
+          ]
+        },
+        {
+          "place_id": 200355394,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 6243972191,
+          "lat": "56.4921304",
+          "lon": "60.2391730",
+          "category": "shop",
+          "type": "variety_store",
+          "place_rank": 30,
+          "importance": 5.917677576862772e-05,
+          "addresstype": "shop",
+          "name": "магазин часов",
+          "display_name": "магазин часов, 2, улица Ленина, Ялунина, Полевской, Полевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623380, Россия",
+          "address": {
+            "shop": "магазин часов",
+            "house_number": "2",
+            "road": "улица Ленина",
+            "suburb": "Ялунина",
+            "town": "Полевской",
+            "county": "Полевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623380",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4920804",
+            "56.4921804",
+            "60.2391230",
+            "60.2392230"
+          ]
+        }
+      ]
+    },
+    "1126833b242996e5d2341cc5fe10ac8a89b757a139b4095da08879d0bd6a65ff": {
+      "checked_at": "2026-10-28T06:05:45.788960+00:00",
+      "query": "Реж улица Красноармейская 16",
+      "candidates": [
+        {
+          "place_id": 200653823,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 299954643,
+          "lat": "57.3748374",
+          "lon": "61.3911759",
+          "category": "amenity",
+          "type": "townhall",
+          "place_rank": 30,
+          "importance": 5.903791866936778e-05,
+          "addresstype": "amenity",
+          "name": "",
+          "display_name": "16, Красноармейская улица, Гавань, Реж, Режевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623750, Россия",
+          "address": {
+            "house_number": "16",
+            "road": "Красноармейская улица",
+            "suburb": "Гавань",
+            "town": "Реж",
+            "county": "Режевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623750",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.3746750",
+            "57.3749943",
+            "61.3904360",
+            "61.3915147"
+          ]
+        },
+        {
+          "place_id": 199902378,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 729440487,
+          "lat": "57.3748826",
+          "lon": "61.3913528",
+          "category": "amenity",
+          "type": "atm",
+          "place_rank": 30,
+          "importance": 5.903791866936778e-05,
+          "addresstype": "amenity",
+          "name": "Сбербанк",
+          "display_name": "Сбербанк, 16, Красноармейская улица, Гавань, Реж, Режевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623750, Россия",
+          "address": {
+            "amenity": "Сбербанк",
+            "house_number": "16",
+            "road": "Красноармейская улица",
+            "suburb": "Гавань",
+            "town": "Реж",
+            "county": "Режевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623750",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.3748326",
+            "57.3749326",
+            "61.3913028",
+            "61.3914028"
+          ]
+        },
+        {
+          "place_id": 200653940,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 2335156356,
+          "lat": "57.3747981",
+          "lon": "61.3911109",
+          "category": "amenity",
+          "type": "townhall",
+          "place_rank": 30,
+          "importance": 5.903791866936778e-05,
+          "addresstype": "amenity",
+          "name": "Администрация Режевского ГО",
+          "display_name": "Администрация Режевского ГО, 16, Красноармейская улица, Гавань, Реж, Режевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623750, Россия",
+          "address": {
+            "amenity": "Администрация Режевского ГО",
+            "house_number": "16",
+            "road": "Красноармейская улица",
+            "suburb": "Гавань",
+            "town": "Реж",
+            "county": "Режевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623750",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.3747481",
+            "57.3748481",
+            "61.3910609",
+            "61.3911609"
+          ]
+        }
+      ]
+    },
+    "b511345fe473678612ff0223eb9389d56ce46e5d66dd40e9f67e6ba709dfd896": {
+      "checked_at": "2026-10-28T06:05:50.687459+00:00",
+      "query": "Невьянск улица Кирова 1",
+      "candidates": [
+        {
+          "place_id": 199820883,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 330106244,
+          "lat": "57.4917464",
+          "lon": "60.2167239",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.9605554283924886e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "1, улица Кирова, Невьянск, Невьянский муниципальный округ, Свердловская область, Уральский федеральный округ, 624192, Россия",
+          "address": {
+            "house_number": "1",
+            "road": "улица Кирова",
+            "town": "Невьянск",
+            "county": "Невьянский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624192",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4916854",
+            "57.4918073",
+            "60.2163956",
+            "60.2170521"
+          ]
+        }
+      ]
+    },
+    "4c88fde78876fb554d455ac6d38692f7e4c81dfd82dd9c5c66f75d6af148a017": {
+      "checked_at": "2026-10-28T06:05:55.426928+00:00",
+      "query": "Кировград улица Свердлова 44",
+      "candidates": [
+        {
+          "place_id": 200103577,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 134636763,
+          "lat": "57.4283659",
+          "lon": "60.0645849",
+          "category": "amenity",
+          "type": "townhall",
+          "place_rank": 30,
+          "importance": 5.954146639195876e-05,
+          "addresstype": "amenity",
+          "name": "Администрация Кировградского ГО",
+          "display_name": "Администрация Кировградского ГО, 44, улица Свердлова, Кировград, Кировградский муниципальный округ, Свердловская область, Уральский федеральный округ, 624142, Россия",
+          "address": {
+            "amenity": "Администрация Кировградского ГО",
+            "house_number": "44",
+            "road": "улица Свердлова",
+            "town": "Кировград",
+            "county": "Кировградский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624142",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4281888",
+            "57.4285431",
+            "60.0643663",
+            "60.0648034"
+          ]
+        }
+      ]
+    },
+    "54fc6c297a2d2f908b054ee432c362acca2e54465e10cd81818aa6332f5cf13c": {
+      "checked_at": "2026-10-28T06:06:00.788307+00:00",
+      "query": "Красноуфимск улица Советская 25",
+      "candidates": [
+        {
+          "place_id": 200203899,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 129663455,
+          "lat": "56.6176622",
+          "lon": "57.7714434",
+          "category": "amenity",
+          "type": "townhall",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "amenity",
+          "name": "Белый дом",
+          "display_name": "Белый дом, 25, Советская улица, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "amenity": "Белый дом",
+            "house_number": "25",
+            "road": "Советская улица",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6172220",
+            "56.6180899",
+            "57.7710767",
+            "57.7724807"
+          ]
+        },
+        {
+          "place_id": 200192628,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 513938133,
+          "lat": "56.6175944",
+          "lon": "57.7719339",
+          "category": "building",
+          "type": "house",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "25, Советская улица, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "house_number": "25",
+            "road": "Советская улица",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6174426",
+            "56.6177462",
+            "57.7716933",
+            "57.7721745"
+          ]
+        },
+        {
+          "place_id": 200192720,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 4698818397,
+          "lat": "56.6173845",
+          "lon": "57.7712710",
+          "category": "shop",
+          "type": "convenience",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "shop",
+          "name": "Фасоль",
+          "display_name": "Фасоль, 25, Советская улица, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "shop": "Фасоль",
+            "house_number": "25",
+            "road": "Советская улица",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6173345",
+            "56.6174345",
+            "57.7712210",
+            "57.7713210"
+          ]
+        },
+        {
+          "place_id": 200225962,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 4467217489,
+          "lat": "56.6173480",
+          "lon": "57.7712411",
+          "category": "amenity",
+          "type": "atm",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "amenity",
+          "name": "ВТБ",
+          "display_name": "ВТБ, 25, Советская улица, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "amenity": "ВТБ",
+            "house_number": "25",
+            "road": "Советская улица",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6172980",
+            "56.6173980",
+            "57.7711911",
+            "57.7712911"
+          ]
+        },
+        {
+          "place_id": 200300720,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 11169633394,
+          "lat": "56.6177083",
+          "lon": "57.7715823",
+          "category": "shop",
+          "type": "outpost",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "shop",
+          "name": "Ozon",
+          "display_name": "Ozon, 25, Советская улица, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "shop": "Ozon",
+            "house_number": "25",
+            "road": "Советская улица",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6176583",
+            "56.6177583",
+            "57.7715323",
+            "57.7716323"
+          ]
+        }
+      ]
+    },
+    "7742d4ded4fcd776b82bafd7c7b051dd78352302e589d9597784c6ef26e04ff9": {
+      "checked_at": "2026-10-28T06:06:05.690452+00:00",
+      "query": "Алапаевск улица Ленина 18",
+      "candidates": [
+        {
+          "place_id": 200409383,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 98874956,
+          "lat": "57.8532178",
+          "lon": "61.7031223",
+          "category": "office",
+          "type": "government",
+          "place_rank": 30,
+          "importance": 6.037766079189772e-05,
+          "addresstype": "office",
+          "name": "Администрация города",
+          "display_name": "Администрация города, 18, улица Ленина, Ялунина Гора, Алапаевск, муниципальный округ Алапаевск, Свердловская область, Уральский федеральный округ, 624600, Россия",
+          "address": {
+            "office": "Администрация города",
+            "house_number": "18",
+            "road": "улица Ленина",
+            "suburb": "Ялунина Гора",
+            "town": "Алапаевск",
+            "county": "муниципальный округ Алапаевск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624600",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.8531247",
+            "57.8533463",
+            "61.7029029",
+            "61.7033416"
+          ]
+        }
+      ]
+    },
+    "c9507b809c0d25a2c15006deef5fe267181f8775b66c966f6f3de99f16bd9057": {
+      "checked_at": "2026-10-28T05:36:25.733482+00:00",
+      "query": "Екатеринбург переулок Буторина 6",
+      "candidates": [
+        {
+          "place_id": 199667218,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 50336391,
+          "lat": "56.8281256",
+          "lon": "60.6432772",
+          "category": "building",
+          "type": "public",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "6, переулок Буторина, Парковый, Октябрьский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620100, Россия",
+          "address": {
+            "house_number": "6",
+            "road": "переулок Буторина",
+            "suburb": "Парковый",
+            "city_district": "Октябрьский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620100",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8278630",
+            "56.8283635",
+            "60.6427952",
+            "60.6435239"
+          ]
+        }
+      ]
+    },
+    "68e4b612a7d3c98e4cf60524792bf1c02988cbc541664c786ff0d7520c94c26d": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Екатеринбург улица Малышева 46",
+      "candidates": [
+        {
+          "place_id": 200192926,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 474949599,
+          "lat": "56.8341141",
+          "lon": "60.6029153",
+          "category": "tourism",
+          "type": "museum",
+          "place_rank": 30,
+          "importance": 0.32771111640952466,
+          "addresstype": "tourism",
+          "name": "Свердловский областной краеведческий музей",
+          "display_name": "Свердловский областной краеведческий музей, 46, улица Малышева, Кольцо Екатерины, Форум-Сити, Ленинский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620219, Россия",
+          "address": {
+            "tourism": "Свердловский областной краеведческий музей",
+            "house_number": "46",
+            "road": "улица Малышева",
+            "neighbourhood": "Кольцо Екатерины",
+            "quarter": "Форум-Сити",
+            "city_district": "Ленинский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620219",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8340641",
+            "56.8341641",
+            "60.6028653",
+            "60.6029653"
+          ]
+        },
+        {
+          "place_id": 427786387,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 52335830,
+          "lat": "56.8340350",
+          "lon": "60.6021440",
+          "category": "building",
+          "type": "civic",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "46, улица Малышева, Кольцо Екатерины, Форум-Сити, Ленинский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620219, Россия",
+          "address": {
+            "house_number": "46",
+            "road": "улица Малышева",
+            "neighbourhood": "Кольцо Екатерины",
+            "quarter": "Форум-Сити",
+            "city_district": "Ленинский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620219",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8338695",
+            "56.8342338",
+            "60.6015900",
+            "60.6030410"
+          ]
+        },
+        {
+          "place_id": 199702470,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 4443303197,
+          "lat": "56.8341482",
+          "lon": "60.6022396",
+          "category": "tourism",
+          "type": "museum",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "tourism",
+          "name": "Музейно-выставочный центр «Дом Поклевских-Козелл»",
+          "display_name": "Музейно-выставочный центр «Дом Поклевских-Козелл», 46, улица Малышева, Кольцо Екатерины, Форум-Сити, Ленинский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620219, Россия",
+          "address": {
+            "tourism": "Музейно-выставочный центр «Дом Поклевских-Козелл»",
+            "house_number": "46",
+            "road": "улица Малышева",
+            "neighbourhood": "Кольцо Екатерины",
+            "quarter": "Форум-Сити",
+            "city_district": "Ленинский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620219",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8340982",
+            "56.8341982",
+            "60.6021896",
+            "60.6022896"
+          ]
+        }
+      ]
+    },
+    "d28fddf0c17afc354128a32b8005a45a8d31b16c83141aca956b9a1b646b6228": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Нижний Тагил проспект Ленина 1",
+      "candidates": [
+        {
+          "place_id": 199805826,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "relation",
+          "osm_id": 16821529,
+          "lat": "57.9052241",
+          "lon": "59.9502322",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 6.434500648503879e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "1, проспект Ленина, Выя, Ленинский район, Нижний Тагил, муниципальный округ Нижний Тагил, Свердловская область, Уральский федеральный округ, 622001, Россия",
+          "address": {
+            "house_number": "1",
+            "road": "проспект Ленина",
+            "suburb": "Выя",
+            "city_district": "Ленинский район",
+            "city": "Нижний Тагил",
+            "county": "муниципальный округ Нижний Тагил",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "622001",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.9046504",
+            "57.9058165",
+            "59.9498907",
+            "59.9518156"
+          ]
+        },
+        {
+          "place_id": 199963346,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 5687215847,
+          "lat": "57.9049184",
+          "lon": "59.9503560",
+          "category": "amenity",
+          "type": "bar",
+          "place_rank": 30,
+          "importance": 6.434500648503879e-05,
+          "addresstype": "amenity",
+          "name": "",
+          "display_name": "1, проспект Ленина, Выя, Ленинский район, Нижний Тагил, муниципальный округ Нижний Тагил, Свердловская область, Уральский федеральный округ, 622001, Россия",
+          "address": {
+            "house_number": "1",
+            "road": "проспект Ленина",
+            "suburb": "Выя",
+            "city_district": "Ленинский район",
+            "city": "Нижний Тагил",
+            "county": "муниципальный округ Нижний Тагил",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "622001",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.9048684",
+            "57.9049684",
+            "59.9503060",
+            "59.9504060"
+          ]
+        }
+      ]
+    },
+    "22426b2c988c83556fd1dbc30966ad4e0b3498d84bfe8e98cf6090e4752aba9f": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Каменск-Уральский улица Ленина 32",
+      "candidates": [
+        {
+          "place_id": 199598141,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 59528038,
+          "lat": "56.4156353",
+          "lon": "61.9160047",
+          "category": "building",
+          "type": "civic",
+          "place_rank": 30,
+          "importance": 6.0846112764126304e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "32, улица Ленина, Октябрьский, Синарский район, Каменск-Уральский, городской округ Каменск-Уральский, Свердловская область, Уральский федеральный округ, 623428, Россия",
+          "address": {
+            "house_number": "32",
+            "road": "улица Ленина",
+            "suburb": "Октябрьский",
+            "city_district": "Синарский район",
+            "city": "Каменск-Уральский",
+            "county": "городской округ Каменск-Уральский",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623428",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4152079",
+            "56.4160683",
+            "61.9156893",
+            "61.9162993"
+          ]
+        },
+        {
+          "place_id": 203829379,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 1044642252,
+          "lat": "56.4156479",
+          "lon": "61.9161902",
+          "category": "amenity",
+          "type": "clock",
+          "place_rank": 30,
+          "importance": 6.0846112764126304e-05,
+          "addresstype": "amenity",
+          "name": "",
+          "display_name": "32, улица Ленина, Октябрьский, Синарский район, Каменск-Уральский, городской округ Каменск-Уральский, Свердловская область, Уральский федеральный округ, 623428, Россия",
+          "address": {
+            "house_number": "32",
+            "road": "улица Ленина",
+            "suburb": "Октябрьский",
+            "city_district": "Синарский район",
+            "city": "Каменск-Уральский",
+            "county": "городской округ Каменск-Уральский",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623428",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4155979",
+            "56.4156979",
+            "61.9161402",
+            "61.9162402"
+          ]
+        },
+        {
+          "place_id": 199757528,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 1367947693,
+          "lat": "56.4156510",
+          "lon": "61.9161041",
+          "category": "amenity",
+          "type": "townhall",
+          "place_rank": 30,
+          "importance": 6.0846112764126304e-05,
+          "addresstype": "amenity",
+          "name": "Администрация города Каменск-Уральского",
+          "display_name": "Администрация города Каменск-Уральского, 32, улица Ленина, Октябрьский, Синарский район, Каменск-Уральский, городской округ Каменск-Уральский, Свердловская область, Уральский федеральный округ, 623428, Россия",
+          "address": {
+            "amenity": "Администрация города Каменск-Уральского",
+            "house_number": "32",
+            "road": "улица Ленина",
+            "suburb": "Октябрьский",
+            "city_district": "Синарский район",
+            "city": "Каменск-Уральский",
+            "county": "городской округ Каменск-Уральский",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623428",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4156010",
+            "56.4157010",
+            "61.9160541",
+            "61.9161541"
+          ]
+        }
+      ]
+    },
+    "826da84c893113fa616f2b177704faeddbe96522f7024ccd6cc146b450cb5d42": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Серов улица Ленина 171",
+      "candidates": [
+        {
+          "place_id": 201665551,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 92667452,
+          "lat": "59.6057295",
+          "lon": "60.5842687",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 5.9526207370062066e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "171, улица Ленина, Старый посёлок, Серов, Серовский муниципальный округ, Свердловская область, Уральский федеральный округ, 620993, Россия",
+          "address": {
+            "house_number": "171",
+            "road": "улица Ленина",
+            "suburb": "Старый посёлок",
+            "city": "Серов",
+            "county": "Серовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620993",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "59.6054152",
+            "59.6060451",
+            "60.5840879",
+            "60.5844505"
+          ]
+        },
+        {
+          "place_id": 198425289,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 9612452536,
+          "lat": "59.6057872",
+          "lon": "60.5843318",
+          "category": "office",
+          "type": "telecommunication",
+          "place_rank": 30,
+          "importance": 5.9526207370062066e-05,
+          "addresstype": "office",
+          "name": "МТС",
+          "display_name": "МТС, 171, улица Ленина, Старый посёлок, Серов, Серовский муниципальный округ, Свердловская область, Уральский федеральный округ, 620993, Россия",
+          "address": {
+            "office": "МТС",
+            "house_number": "171",
+            "road": "улица Ленина",
+            "suburb": "Старый посёлок",
+            "city": "Серов",
+            "county": "Серовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620993",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "59.6057372",
+            "59.6058372",
+            "60.5842818",
+            "60.5843818"
+          ]
+        },
+        {
+          "place_id": 201668387,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 9718273321,
+          "lat": "59.6058971",
+          "lon": "60.5841359",
+          "category": "office",
+          "type": "telecommunication",
+          "place_rank": 30,
+          "importance": 5.9526207370062066e-05,
+          "addresstype": "office",
+          "name": "Билайн",
+          "display_name": "Билайн, 171, улица Ленина, Старый посёлок, Серов, Серовский муниципальный округ, Свердловская область, Уральский федеральный округ, 620993, Россия",
+          "address": {
+            "office": "Билайн",
+            "house_number": "171",
+            "road": "улица Ленина",
+            "suburb": "Старый посёлок",
+            "city": "Серов",
+            "county": "Серовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620993",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "59.6058471",
+            "59.6059471",
+            "60.5840859",
+            "60.5841859"
+          ]
+        }
+      ]
+    },
+    "2882a79212cc2a4e167220ad461e279b465452b1de9e6a5f3733d7e47a3fd265": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Берёзовский Свердловская область улица Ленина 11",
+      "candidates": [
+        {
+          "place_id": 200565271,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 388943117,
+          "lat": "56.9104908",
+          "lon": "60.8495694",
+          "category": "building",
+          "type": "detached",
+          "place_rank": 30,
+          "importance": 5.954604409852777e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "11, улица Ленина, Шиловский, Берёзовский, Берёзовский муниципальный округ, Свердловская область, Уральский федеральный округ, 623706, Россия",
+          "address": {
+            "house_number": "11",
+            "road": "улица Ленина",
+            "neighbourhood": "Шиловский",
+            "town": "Берёзовский",
+            "county": "Берёзовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623706",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9104330",
+            "56.9105486",
+            "60.8494686",
+            "60.8496702"
+          ]
+        }
+      ]
+    },
+    "f3641c9df5ae1191921cc4dea49ce73e6751ac52c07252b3a669d86c565b1195": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Ревда Свердловская область улица Мира 32",
+      "candidates": [
+        {
+          "place_id": 198805303,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 130417549,
+          "lat": "56.7977381",
+          "lon": "59.9126675",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "32, улица Мира, Центральный, Ревда, муниципальный округ Ревда, Свердловская область, Уральский федеральный округ, 623280, Россия",
+          "address": {
+            "house_number": "32",
+            "road": "улица Мира",
+            "suburb": "Центральный",
+            "town": "Ревда",
+            "county": "муниципальный округ Ревда",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623280",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.7976478",
+            "56.7978284",
+            "59.9124018",
+            "59.9129332"
+          ]
+        },
+        {
+          "place_id": 199023380,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 4808014023,
+          "lat": "56.7977590",
+          "lon": "59.9127283",
+          "category": "office",
+          "type": "government",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "office",
+          "name": "Многофункциональный центр",
+          "display_name": "Многофункциональный центр, 32, улица Мира, Центральный, Ревда, муниципальный округ Ревда, Свердловская область, Уральский федеральный округ, 623280, Россия",
+          "address": {
+            "office": "Многофункциональный центр",
+            "house_number": "32",
+            "road": "улица Мира",
+            "suburb": "Центральный",
+            "town": "Ревда",
+            "county": "муниципальный округ Ревда",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623280",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.7977090",
+            "56.7978090",
+            "59.9126783",
+            "59.9127783"
+          ]
+        }
+      ]
+    },
+    "26b9070f28f496cfc8d47782492cf338b61082be981d5346b1357d5356699e40": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Первоуральск проспект Ильича 28",
+      "candidates": [
+        {
+          "place_id": 199540071,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 49924470,
+          "lat": "56.9036024",
+          "lon": "59.9581874",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "28, проспект Ильича, Соцгород, Первоуральск, муниципальный округ Первоуральск, Свердловская область, Уральский федеральный округ, 623103, Россия",
+          "address": {
+            "house_number": "28",
+            "road": "проспект Ильича",
+            "suburb": "Соцгород",
+            "city": "Первоуральск",
+            "county": "муниципальный округ Первоуральск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623103",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9031419",
+            "56.9038404",
+            "59.9577129",
+            "59.9586633"
+          ]
+        },
+        {
+          "place_id": 199537986,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 536699847,
+          "lat": "56.9033154",
+          "lon": "59.9580157",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "28, проспект Ильича, Соцгород, Первоуральск, муниципальный округ Первоуральск, Свердловская область, Уральский федеральный округ, 623103, Россия",
+          "address": {
+            "house_number": "28",
+            "road": "проспект Ильича",
+            "suburb": "Соцгород",
+            "city": "Первоуральск",
+            "county": "муниципальный округ Первоуральск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623103",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9032410",
+            "56.9033903",
+            "59.9577279",
+            "59.9583011"
+          ]
+        },
+        {
+          "place_id": 199554408,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 5853513488,
+          "lat": "56.9037111",
+          "lon": "59.9584376",
+          "category": "shop",
+          "type": "bakery",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "shop",
+          "name": "",
+          "display_name": "28, проспект Ильича, Соцгород, Первоуральск, муниципальный округ Первоуральск, Свердловская область, Уральский федеральный округ, 623103, Россия",
+          "address": {
+            "house_number": "28",
+            "road": "проспект Ильича",
+            "suburb": "Соцгород",
+            "city": "Первоуральск",
+            "county": "муниципальный округ Первоуральск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623103",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9036611",
+            "56.9037611",
+            "59.9583876",
+            "59.9584876"
+          ]
+        }
+      ]
+    },
+    "f3475868f69736ab92da4129f720be706a50bcbd3ddbccba9c716c92b39f22e2": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Верхняя Пышма улица Красноармейская 1",
+      "candidates": [
+        {
+          "place_id": 421327065,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 92006487,
+          "lat": "56.9672808",
+          "lon": "60.5818214",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "1, Красноармейская улица, Верхняя Пышма, городской округ Верхняя Пышма, Свердловская область, Уральский федеральный округ, 624091, Россия",
+          "address": {
+            "house_number": "1",
+            "road": "Красноармейская улица",
+            "town": "Верхняя Пышма",
+            "county": "городской округ Верхняя Пышма",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624091",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9668240",
+            "56.9677376",
+            "60.5817071",
+            "60.5819356"
+          ]
+        }
+      ]
+    },
+    "119694429d44d42db5cf88f04767dd4e68b55e25b298eca71b4c581163d5cd93": {
+      "checked_at": "2026-10-28T06:06:48.811199+00:00",
+      "query": "Асбест улица Уральская 71",
+      "candidates": [
+        {
+          "place_id": 200865623,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 54933705,
+          "lat": "57.0122731",
+          "lon": "61.4684807",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.990768291747948e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "71, Уральская улица, Асбест, Асбестовский муниципальный округ, Свердловская область, Уральский федеральный округ, 624261, Россия",
+          "address": {
+            "house_number": "71",
+            "road": "Уральская улица",
+            "town": "Асбест",
+            "county": "Асбестовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624261",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.0120204",
+            "57.0125258",
+            "61.4682836",
+            "61.4686777"
+          ]
+        }
+      ]
+    },
+    "4c8f6c589a15dc53a383acdd4dafa4dea80181347510e093d75b0f099e22de05": {
+      "checked_at": "2026-10-28T06:05:42.598965+00:00",
+      "query": "Полевской улица Свердлова 19",
+      "candidates": [
+        {
+          "place_id": 200093771,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 113109632,
+          "lat": "56.4984367",
+          "lon": "60.2372476",
+          "category": "building",
+          "type": "commercial",
+          "place_rank": 30,
+          "importance": 5.917677576862772e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "19, улица Свердлова, Ялунина, Полевской, Полевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623380, Россия",
+          "address": {
+            "house_number": "19",
+            "road": "улица Свердлова",
+            "suburb": "Ялунина",
+            "town": "Полевской",
+            "county": "Полевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623380",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4982078",
+            "56.4986655",
+            "60.2370122",
+            "60.2374831"
+          ]
+        }
+      ]
+    },
+    "dceeef855d3e04494f8ee00fc0d9518997eb5dc30e78653f2967ee1084f38a2d": {
+      "checked_at": "2026-10-28T06:05:47.433820+00:00",
+      "query": "Реж улица Ленина 3",
+      "candidates": [
+        {
+          "place_id": 199866794,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 286620326,
+          "lat": "57.3735638",
+          "lon": "61.3930503",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 5.903791866936778e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "3, улица Ленина, Гавань, Реж, Режевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623750, Россия",
+          "address": {
+            "house_number": "3",
+            "road": "улица Ленина",
+            "suburb": "Гавань",
+            "town": "Реж",
+            "county": "Режевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623750",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.3734174",
+            "57.3737102",
+            "61.3926120",
+            "61.3934885"
+          ]
+        },
+        {
+          "place_id": 199871239,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 720557819,
+          "lat": "57.3734951",
+          "lon": "61.3927210",
+          "category": "amenity",
+          "type": "pharmacy",
+          "place_rank": 30,
+          "importance": 5.903791866936778e-05,
+          "addresstype": "amenity",
+          "name": "",
+          "display_name": "3, улица Ленина, Гавань, Реж, Режевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623750, Россия",
+          "address": {
+            "house_number": "3",
+            "road": "улица Ленина",
+            "suburb": "Гавань",
+            "town": "Реж",
+            "county": "Режевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623750",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.3734451",
+            "57.3735451",
+            "61.3926710",
+            "61.3927710"
+          ]
+        }
+      ]
+    },
+    "c77abe095876f8649c4abd7d6d3381dc598a9f47a6bb75fd7b366037885c8ffe": {
+      "checked_at": "2026-10-28T06:08:06.320492+00:00",
+      "query": "Невьянск улица Кирова 2",
+      "candidates": [
+        {
+          "place_id": 200694088,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 640560344,
+          "lat": "57.4910148",
+          "lon": "60.2152955",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.9605554283924886e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "2, улица Кирова, Невьянск, Невьянский муниципальный округ, Свердловская область, Уральский федеральный округ, 624192, Россия",
+          "address": {
+            "house_number": "2",
+            "road": "улица Кирова",
+            "town": "Невьянск",
+            "county": "Невьянский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624192",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4909117",
+            "57.4911809",
+            "60.2150916",
+            "60.2154009"
+          ]
+        }
+      ]
+    },
+    "6979eca93fb7c730102ddce7879b34cfd6d17c36af4b193280e7ebcf74603c66": {
+      "checked_at": "2026-10-28T06:05:57.322764+00:00",
+      "query": "Кировград улица Свердлова 35",
+      "candidates": [
+        {
+          "place_id": 201249894,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 653730255,
+          "lat": "57.4246439",
+          "lon": "60.0665811",
+          "category": "building",
+          "type": "commercial",
+          "place_rank": 30,
+          "importance": 5.954146639195876e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "35, улица Свердлова, Кировград, Кировградский муниципальный округ, Свердловская область, Уральский федеральный округ, 624142, Россия",
+          "address": {
+            "house_number": "35",
+            "road": "улица Свердлова",
+            "town": "Кировград",
+            "county": "Кировградский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624142",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4244415",
+            "57.4248564",
+            "60.0662866",
+            "60.0668775"
+          ]
+        },
+        {
+          "place_id": 199075270,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 11572394528,
+          "lat": "57.4247370",
+          "lon": "60.0665978",
+          "category": "shop",
+          "type": "supermarket",
+          "place_rank": 30,
+          "importance": 5.954146639195876e-05,
+          "addresstype": "shop",
+          "name": "Доброцен",
+          "display_name": "Доброцен, 35, улица Свердлова, Кировград, Кировградский муниципальный округ, Свердловская область, Уральский федеральный округ, 624142, Россия",
+          "address": {
+            "shop": "Доброцен",
+            "house_number": "35",
+            "road": "улица Свердлова",
+            "town": "Кировград",
+            "county": "Кировградский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624142",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4246870",
+            "57.4247870",
+            "60.0665478",
+            "60.0666478"
+          ]
+        },
+        {
+          "place_id": 202318972,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 8937703268,
+          "lat": "57.4246533",
+          "lon": "60.0666880",
+          "category": "shop",
+          "type": "alcohol",
+          "place_rank": 30,
+          "importance": 5.954146639195876e-05,
+          "addresstype": "shop",
+          "name": "Косулинская пивоварня",
+          "display_name": "Косулинская пивоварня, 35, улица Свердлова, Кировград, Кировградский муниципальный округ, Свердловская область, Уральский федеральный округ, 624142, Россия",
+          "address": {
+            "shop": "Косулинская пивоварня",
+            "house_number": "35",
+            "road": "улица Свердлова",
+            "town": "Кировград",
+            "county": "Кировградский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624142",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4246033",
+            "57.4247033",
+            "60.0666380",
+            "60.0667380"
+          ]
+        }
+      ]
+    },
+    "d07602f5ac8de4031a2910b83a5c2ad727dda9bd811e53cc732d06c12720a33c": {
+      "checked_at": "2026-10-28T06:08:14.546940+00:00",
+      "query": "Красноуфимск улица Мизерова 98",
+      "candidates": [
+        {
+          "place_id": 199601781,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 101153903,
+          "lat": "56.6140801",
+          "lon": "57.7774412",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "98, улица Мизерова, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "house_number": "98",
+            "road": "улица Мизерова",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6137654",
+            "56.6143947",
+            "57.7767499",
+            "57.7781324"
+          ]
+        },
+        {
+          "place_id": 199458680,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 4438706289,
+          "lat": "56.6139881",
+          "lon": "57.7777472",
+          "category": "amenity",
+          "type": "cafe",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "amenity",
+          "name": "Пельменная Браво +",
+          "display_name": "Пельменная Браво +, 98, улица Мизерова, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "amenity": "Пельменная Браво +",
+            "house_number": "98",
+            "road": "улица Мизерова",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6139381",
+            "56.6140381",
+            "57.7776972",
+            "57.7777972"
+          ]
+        },
+        {
+          "place_id": 199518186,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 9944357828,
+          "lat": "56.6140894",
+          "lon": "57.7775422",
+          "category": "shop",
+          "type": "convenience",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "shop",
+          "name": "Фасоль",
+          "display_name": "Фасоль, 98, улица Мизерова, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "shop": "Фасоль",
+            "house_number": "98",
+            "road": "улица Мизерова",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6140394",
+            "56.6141394",
+            "57.7774922",
+            "57.7775922"
+          ]
+        }
+      ]
+    },
+    "a2da16a95d5324dd4f354314bb30685efb3374bba7e9e37a08223f9b4b5f132b": {
+      "checked_at": "2026-10-28T06:06:07.277539+00:00",
+      "query": "Алапаевск улица Ленина 7",
+      "candidates": [
+        {
+          "place_id": 200048126,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 99703654,
+          "lat": "57.8486143",
+          "lon": "61.7018769",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 6.037766079189772e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "7, улица Ленина, Рабочий Городок, Алапаевск, муниципальный округ Алапаевск, Свердловская область, Уральский федеральный округ, 624605, Россия",
+          "address": {
+            "house_number": "7",
+            "road": "улица Ленина",
+            "suburb": "Рабочий Городок",
+            "town": "Алапаевск",
+            "county": "муниципальный округ Алапаевск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624605",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.8484037",
+            "57.8488249",
+            "61.7017300",
+            "61.7020238"
+          ]
+        }
+      ]
+    },
+    "63d8d38f5528cc220b04c72726af2cd5969fcdad997abe986b3f8590f1e90675": {
+      "checked_at": "2026-10-28T05:36:25.827677+00:00",
+      "query": "Екатеринбург переулок Буторина 3",
+      "candidates": [
+        {
+          "place_id": 200699913,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 55455580,
+          "lat": "56.8274833",
+          "lon": "60.6436358",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "3, переулок Буторина, Парковый, Октябрьский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620100, Россия",
+          "address": {
+            "house_number": "3",
+            "road": "переулок Буторина",
+            "suburb": "Парковый",
+            "city_district": "Октябрьский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620100",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8272239",
+            "56.8277597",
+            "60.6433900",
+            "60.6438917"
+          ]
+        }
+      ]
+    },
+    "dbe60a7c5e32e0e96aec97b11bb197dde67021b258820ea7c7dcd8ce46d49edd": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Екатеринбург улица 8 Марта 8",
+      "candidates": [
+        {
+          "place_id": 428161492,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 52170640,
+          "lat": "56.8386359",
+          "lon": "60.5979516",
+          "category": "building",
+          "type": "civic",
+          "place_rank": 30,
+          "importance": 0.2562004762132184,
+          "addresstype": "building",
+          "name": "Дом Актёра",
+          "display_name": "Дом Актёра, 8, улица 8 Марта, Екатеринбург-Сити, Заречный, Верх-Исетский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620077, Россия",
+          "address": {
+            "building": "Дом Актёра",
+            "house_number": "8",
+            "road": "улица 8 Марта",
+            "quarter": "Екатеринбург-Сити",
+            "suburb": "Заречный",
+            "city_district": "Верх-Исетский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620077",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8385363",
+            "56.8387961",
+            "60.5977018",
+            "60.5981801"
+          ]
+        }
+      ]
+    },
+    "8f7abbc2aebba03c29db7f50fa80bfee0fd9d8d0772fe6903d3a60e3d3eff71b": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Нижний Тагил проспект Ленина 31",
+      "candidates": [
+        {
+          "place_id": 199337435,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 167695463,
+          "lat": "57.9070800",
+          "lon": "59.9664908",
+          "category": "amenity",
+          "type": "arts_centre",
+          "place_rank": 30,
+          "importance": 0.04539457909600718,
+          "addresstype": "amenity",
+          "name": "Нижнетагильская филармония",
+          "display_name": "Нижнетагильская филармония, 31, проспект Ленина, Выя, Ленинский район, Нижний Тагил, муниципальный округ Нижний Тагил, Свердловская область, Уральский федеральный округ, 622001, Россия",
+          "address": {
+            "amenity": "Нижнетагильская филармония",
+            "house_number": "31",
+            "road": "проспект Ленина",
+            "suburb": "Выя",
+            "city_district": "Ленинский район",
+            "city": "Нижний Тагил",
+            "county": "муниципальный округ Нижний Тагил",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "622001",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.9068708",
+            "57.9072916",
+            "59.9661564",
+            "59.9679199"
+          ]
+        }
+      ]
+    },
+    "8b6b49a07f00476eb37ccd27fbd8631eec8d705c1fe02b6ca802939f6ab7b2c3": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Каменск-Уральский проспект Победы 97а",
+      "candidates": [
+        {
+          "place_id": 200125777,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 89810863,
+          "lat": "56.4266888",
+          "lon": "61.8859128",
+          "category": "building",
+          "type": "commercial",
+          "place_rank": 30,
+          "importance": 6.0846112764126304e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "97А, проспект Победы, Бараба, Синарский район, Каменск-Уральский, городской округ Каменск-Уральский, Свердловская область, Уральский федеральный округ, 623428, Россия",
+          "address": {
+            "house_number": "97А",
+            "road": "проспект Победы",
+            "suburb": "Бараба",
+            "city_district": "Синарский район",
+            "city": "Каменск-Уральский",
+            "county": "городской округ Каменск-Уральский",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623428",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4265157",
+            "56.4268714",
+            "61.8856511",
+            "61.8861779"
+          ]
+        },
+        {
+          "place_id": 200134324,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 3148785749,
+          "lat": "56.4267575",
+          "lon": "61.8860054",
+          "category": "office",
+          "type": "government",
+          "place_rank": 30,
+          "importance": 6.0846112764126304e-05,
+          "addresstype": "office",
+          "name": "Прокуратура г.Каменска-Уральского",
+          "display_name": "Прокуратура г.Каменска-Уральского, 97А, проспект Победы, Бараба, Синарский район, Каменск-Уральский, городской округ Каменск-Уральский, Свердловская область, Уральский федеральный округ, 623428, Россия",
+          "address": {
+            "office": "Прокуратура г.Каменска-Уральского",
+            "house_number": "97А",
+            "road": "проспект Победы",
+            "suburb": "Бараба",
+            "city_district": "Синарский район",
+            "city": "Каменск-Уральский",
+            "county": "городской округ Каменск-Уральский",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623428",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4267075",
+            "56.4268075",
+            "61.8859554",
+            "61.8860554"
+          ]
+        }
+      ]
+    },
+    "e41693c5b9a8df33ef829774949fd0efbe482f12944d3a906087df5009128d34": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Серов улица Льва Толстого 24",
+      "candidates": [
+        {
+          "place_id": 199737836,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 92833036,
+          "lat": "59.6005072",
+          "lon": "60.5827600",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.9526207370062066e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "24, улица Льва Толстого, 1-й разъезд, Серов, Серовский муниципальный округ, Свердловская область, Уральский федеральный округ, 624982, Россия",
+          "address": {
+            "house_number": "24",
+            "road": "улица Льва Толстого",
+            "suburb": "1-й разъезд",
+            "city": "Серов",
+            "county": "Серовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624982",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "59.6003645",
+            "59.6008789",
+            "60.5825059",
+            "60.5837735"
+          ]
+        }
+      ]
+    },
+    "2ddfb67d07f75bb6e47873c256311331040a33b11a3db7e7d41fc88627ef756f": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Берёзовский Свердловская область улица Красных Героев 2",
+      "candidates": [
+        {
+          "place_id": 198873600,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 56052483,
+          "lat": "56.9092169",
+          "lon": "60.7992388",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 5.954604409852777e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "2, улица Красных Героев, Берёзовский, Берёзовский муниципальный округ, Свердловская область, Уральский федеральный округ, 623700, Россия",
+          "address": {
+            "house_number": "2",
+            "road": "улица Красных Героев",
+            "town": "Берёзовский",
+            "county": "Берёзовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623700",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9089736",
+            "56.9093974",
+            "60.7987228",
+            "60.7995366"
+          ]
+        }
+      ]
+    },
+    "cedce233712c8a558a9b8325093ab3bb689021215cd67a00e4ab773f2f7798fb": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Ревда Свердловская область улица Горького 12",
+      "candidates": [
+        {
+          "place_id": 200128554,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 131945236,
+          "lat": "56.8042659",
+          "lon": "59.9089833",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "12, улица Максима Горького, Центральный, Ревда, муниципальный округ Ревда, Свердловская область, Уральский федеральный округ, 623280, Россия",
+          "address": {
+            "house_number": "12",
+            "road": "улица Максима Горького",
+            "suburb": "Центральный",
+            "town": "Ревда",
+            "county": "муниципальный округ Ревда",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623280",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8040826",
+            "56.8044412",
+            "59.9087960",
+            "59.9091675"
+          ]
+        },
+        {
+          "place_id": 202672853,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 12281085987,
+          "lat": "56.8043460",
+          "lon": "59.9090749",
+          "category": "amenity",
+          "type": "pharmacy",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "amenity",
+          "name": "Фармленд",
+          "display_name": "Фармленд, 12, улица Максима Горького, Центральный, Ревда, муниципальный округ Ревда, Свердловская область, Уральский федеральный округ, 623280, Россия",
+          "address": {
+            "amenity": "Фармленд",
+            "house_number": "12",
+            "road": "улица Максима Горького",
+            "suburb": "Центральный",
+            "town": "Ревда",
+            "county": "муниципальный округ Ревда",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623280",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8042960",
+            "56.8043960",
+            "59.9090249",
+            "59.9091249"
+          ]
+        }
+      ]
+    },
+    "d076eb5e2dec1693b4cb124394e818d23f606322616896e850e87e961ce4b62e": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Первоуральск улица Ватутина 45",
+      "candidates": [
+        {
+          "place_id": 200052910,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 208731775,
+          "lat": "56.9062236",
+          "lon": "59.9421155",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 6.0840009155367626e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "45, улица Ватутина, Медгородок, Первоуральск, муниципальный округ Первоуральск, Свердловская область, Уральский федеральный округ, 623101, Россия",
+          "address": {
+            "house_number": "45",
+            "road": "улица Ватутина",
+            "suburb": "Медгородок",
+            "city": "Первоуральск",
+            "county": "муниципальный округ Первоуральск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623101",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9060847",
+            "56.9063624",
+            "59.9420049",
+            "59.9422260"
+          ]
+        }
+      ]
+    },
+    "36f85a34ff4447e33a49aa04b92405f6b212e3932d9a70776784dfaa4a3838e4": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Верхняя Пышма Успенский проспект 111",
+      "candidates": [
+        {
+          "place_id": 200074532,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 53059435,
+          "lat": "56.9765589",
+          "lon": "60.5605587",
+          "category": "building",
+          "type": "apartments",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "111, Успенский проспект, Верхняя Пышма, городской округ Верхняя Пышма, Свердловская область, Уральский федеральный округ, 624090, Россия",
+          "address": {
+            "house_number": "111",
+            "road": "Успенский проспект",
+            "town": "Верхняя Пышма",
+            "county": "городской округ Верхняя Пышма",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624090",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9763103",
+            "56.9768190",
+            "60.5598142",
+            "60.5612840"
+          ]
+        },
+        {
+          "place_id": 200283459,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 6026124085,
+          "lat": "56.9764243",
+          "lon": "60.5611657",
+          "category": "shop",
+          "type": "electronics",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "shop",
+          "name": "DNS",
+          "display_name": "DNS, 111, Успенский проспект, Верхняя Пышма, городской округ Верхняя Пышма, Свердловская область, Уральский федеральный округ, 624090, Россия",
+          "address": {
+            "shop": "DNS",
+            "house_number": "111",
+            "road": "Успенский проспект",
+            "town": "Верхняя Пышма",
+            "county": "городской округ Верхняя Пышма",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624090",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.9763743",
+            "56.9764743",
+            "60.5611157",
+            "60.5612157"
+          ]
+        }
+      ]
+    },
+    "e1d7adcef372b1aae283bef0b55be4a3c249cf80d76365a2bf3291361974fc4c": {
+      "checked_at": "2026-10-28T06:06:50.472055+00:00",
+      "query": "Асбест улица Уральская 75",
+      "candidates": [
+        {
+          "place_id": 200952016,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 56724501,
+          "lat": "57.0136028",
+          "lon": "61.4685201",
+          "category": "amenity",
+          "type": "arts_centre",
+          "place_rank": 30,
+          "importance": 5.990768291747948e-05,
+          "addresstype": "amenity",
+          "name": "Асбест, Допобразование МБУ ДО центр детского творчества имени Н. М. Аввакумова Асбестовского городского округа",
+          "display_name": "Асбест, Допобразование МБУ ДО центр детского творчества имени Н. М. Аввакумова Асбестовского городского округа, 75, Уральская улица, Асбест, Асбестовский муниципальный округ, Свердловская область, Уральский федеральный округ, 624261, Россия",
+          "address": {
+            "amenity": "Асбест, Допобразование МБУ ДО центр детского творчества имени Н. М. Аввакумова Асбестовского городского округа",
+            "house_number": "75",
+            "road": "Уральская улица",
+            "town": "Асбест",
+            "county": "Асбестовский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624261",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.0132720",
+            "57.0139466",
+            "61.4679996",
+            "61.4687604"
+          ]
+        }
+      ]
+    },
+    "f8e29b882016c9f3acb8e109b55d6ae940cfbd7d6fa7aed7a6afc5112101c7fb": {
+      "checked_at": "2026-10-28T06:05:44.031727+00:00",
+      "query": "Полевской улица Карла Маркса 22",
+      "candidates": [
+        {
+          "place_id": 200228525,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 84950556,
+          "lat": "56.4448518",
+          "lon": "60.1590594",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.917677576862772e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "22, улица Карла Маркса, 1-й микрорайон, Полевской, Полевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623380, Россия",
+          "address": {
+            "house_number": "22",
+            "road": "улица Карла Маркса",
+            "suburb": "1-й микрорайон",
+            "town": "Полевской",
+            "county": "Полевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623380",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4446281",
+            "56.4450754",
+            "60.1585104",
+            "60.1596084"
+          ]
+        },
+        {
+          "place_id": 200061124,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 976731761,
+          "lat": "56.4447711",
+          "lon": "60.1591761",
+          "category": "shop",
+          "type": "supermarket",
+          "place_rank": 30,
+          "importance": 5.917677576862772e-05,
+          "addresstype": "shop",
+          "name": "Пятёрочка",
+          "display_name": "Пятёрочка, 22, улица Карла Маркса, 1-й микрорайон, Полевской, Полевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623380, Россия",
+          "address": {
+            "shop": "Пятёрочка",
+            "house_number": "22",
+            "road": "улица Карла Маркса",
+            "suburb": "1-й микрорайон",
+            "town": "Полевской",
+            "county": "Полевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623380",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.4447211",
+            "56.4448211",
+            "60.1591261",
+            "60.1592261"
+          ]
+        }
+      ]
+    },
+    "f54b6c28545d23e1ba5d4953bcefae9c70909caa2067c97e32410b68c3883fd2": {
+      "checked_at": "2026-10-28T06:06:52.297161+00:00",
+      "query": "Реж улица Ленина 5",
+      "candidates": [
+        {
+          "place_id": 198864255,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 295791194,
+          "lat": "57.3728128",
+          "lon": "61.3907673",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.903791866936778e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "5, улица Ленина, Гавань, Реж, Режевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623730, Россия",
+          "address": {
+            "house_number": "5",
+            "road": "улица Ленина",
+            "suburb": "Гавань",
+            "town": "Реж",
+            "county": "Режевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623730",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.3725743",
+            "57.3730512",
+            "61.3904826",
+            "61.3910519"
+          ]
+        },
+        {
+          "place_id": 200325422,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 9612453824,
+          "lat": "57.3727280",
+          "lon": "61.3907593",
+          "category": "office",
+          "type": "telecommunication",
+          "place_rank": 30,
+          "importance": 5.903791866936778e-05,
+          "addresstype": "office",
+          "name": "МТС",
+          "display_name": "МТС, 5, улица Ленина, Гавань, Реж, Режевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623730, Россия",
+          "address": {
+            "office": "МТС",
+            "house_number": "5",
+            "road": "улица Ленина",
+            "suburb": "Гавань",
+            "town": "Реж",
+            "county": "Режевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623730",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.3726780",
+            "57.3727780",
+            "61.3907093",
+            "61.3908093"
+          ]
+        },
+        {
+          "place_id": 200480678,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 3040997383,
+          "lat": "57.3728820",
+          "lon": "61.3907097",
+          "category": "shop",
+          "type": "supermarket",
+          "place_rank": 30,
+          "importance": 5.903791866936778e-05,
+          "addresstype": "shop",
+          "name": "Пятёрочка",
+          "display_name": "Пятёрочка, 5, улица Ленина, Гавань, Реж, Режевской муниципальный округ, Свердловская область, Уральский федеральный округ, 623730, Россия",
+          "address": {
+            "shop": "Пятёрочка",
+            "house_number": "5",
+            "road": "улица Ленина",
+            "suburb": "Гавань",
+            "town": "Реж",
+            "county": "Режевской муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623730",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.3728320",
+            "57.3729320",
+            "61.3906597",
+            "61.3907597"
+          ]
+        }
+      ]
+    },
+    "95ffb03b857610882b2489df0f364ac717d21a708516c4806096d9963efd0e75": {
+      "checked_at": "2026-10-28T06:05:53.704099+00:00",
+      "query": "Невьянск улица Ленина 13",
+      "candidates": [
+        {
+          "place_id": 200284187,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 135670603,
+          "lat": "57.4860152",
+          "lon": "60.2161742",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.9605554283924886e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "13, улица Ленина, Невьянск, Невьянский муниципальный округ, Свердловская область, Уральский федеральный округ, 624194, Россия",
+          "address": {
+            "house_number": "13",
+            "road": "улица Ленина",
+            "town": "Невьянск",
+            "county": "Невьянский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624194",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4856849",
+            "57.4863623",
+            "60.2160022",
+            "60.2163432"
+          ]
+        }
+      ]
+    },
+    "f4e916b8c22c7dbf966acb5a19032c5144da3606b7c2f47d121c58b85c9f8848": {
+      "checked_at": "2026-10-28T06:08:11.449149+00:00",
+      "query": "Кировград улица Свердлова 41",
+      "candidates": [
+        {
+          "place_id": 200550345,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 135068913,
+          "lat": "57.4271149",
+          "lon": "60.0642688",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.954146639195876e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "41, улица Свердлова, Кировград, Кировградский муниципальный округ, Свердловская область, Уральский федеральный округ, 624142, Россия",
+          "address": {
+            "house_number": "41",
+            "road": "улица Свердлова",
+            "town": "Кировград",
+            "county": "Кировградский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624142",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4269283",
+            "57.4273041",
+            "60.0638861",
+            "60.0647392"
+          ]
+        },
+        {
+          "place_id": 200565995,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 1484500839,
+          "lat": "57.4271715",
+          "lon": "60.0643234",
+          "category": "shop",
+          "type": "convenience",
+          "place_rank": 30,
+          "importance": 5.954146639195876e-05,
+          "addresstype": "shop",
+          "name": "Магазин клен",
+          "display_name": "Магазин клен, 41, улица Свердлова, Кировград, Кировградский муниципальный округ, Свердловская область, Уральский федеральный округ, 624142, Россия",
+          "address": {
+            "shop": "Магазин клен",
+            "house_number": "41",
+            "road": "улица Свердлова",
+            "town": "Кировград",
+            "county": "Кировградский муниципальный округ",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624142",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.4271215",
+            "57.4272215",
+            "60.0642734",
+            "60.0643734"
+          ]
+        }
+      ]
+    },
+    "e8b4c27959103c0c9f27ee93ff70f361767039c0faa27fa0f531abac5110c1c1": {
+      "checked_at": "2026-10-28T06:06:04.014841+00:00",
+      "query": "Красноуфимск улица Мизерова 100",
+      "candidates": [
+        {
+          "place_id": 199549681,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 101153907,
+          "lat": "56.6136070",
+          "lon": "57.7785761",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "100, улица Мизерова, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "house_number": "100",
+            "road": "улица Мизерова",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6133722",
+            "56.6137651",
+            "57.7782426",
+            "57.7789506"
+          ]
+        },
+        {
+          "place_id": 199582414,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 4959491121,
+          "lat": "56.6134139",
+          "lon": "57.7790171",
+          "category": "amenity",
+          "type": "pharmacy",
+          "place_rank": 30,
+          "importance": 5.98512245364617e-05,
+          "addresstype": "amenity",
+          "name": "Аптека",
+          "display_name": "Аптека, 100, улица Мизерова, Остров, Красноуфимск, городской округ Красноуфимск, Свердловская область, Уральский федеральный округ, 623300, Россия",
+          "address": {
+            "amenity": "Аптека",
+            "house_number": "100",
+            "road": "улица Мизерова",
+            "suburb": "Остров",
+            "town": "Красноуфимск",
+            "county": "городской округ Красноуфимск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "623300",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.6133639",
+            "56.6134639",
+            "57.7789671",
+            "57.7790671"
+          ]
+        }
+      ]
+    },
+    "173d004f2343d2c02c71f1010d634451e0aa3930dc9dbd506731b0d648305385": {
+      "checked_at": "2026-10-28T06:06:58.779738+00:00",
+      "query": "Алапаевск улица Ленина 20",
+      "candidates": [
+        {
+          "place_id": 200306478,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 98874954,
+          "lat": "57.8534994",
+          "lon": "61.7030855",
+          "category": "building",
+          "type": "yes",
+          "place_rank": 30,
+          "importance": 6.037766079189772e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "20, улица Ленина, Ялунина Гора, Алапаевск, муниципальный округ Алапаевск, Свердловская область, Уральский федеральный округ, 624605, Россия",
+          "address": {
+            "house_number": "20",
+            "road": "улица Ленина",
+            "suburb": "Ялунина Гора",
+            "town": "Алапаевск",
+            "county": "муниципальный округ Алапаевск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624605",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.8533886",
+            "57.8536101",
+            "61.7029269",
+            "61.7032441"
+          ]
+        },
+        {
+          "place_id": 198187802,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "node",
+          "osm_id": 10010728421,
+          "lat": "57.8534742",
+          "lon": "61.7029806",
+          "category": "man_made",
+          "type": "tower",
+          "place_rank": 30,
+          "importance": 6.037766079189772e-05,
+          "addresstype": "man_made",
+          "name": "Каланча",
+          "display_name": "Каланча, 20, улица Ленина, Ялунина Гора, Алапаевск, муниципальный округ Алапаевск, Свердловская область, Уральский федеральный округ, 624605, Россия",
+          "address": {
+            "man_made": "Каланча",
+            "house_number": "20",
+            "road": "улица Ленина",
+            "suburb": "Ялунина Гора",
+            "town": "Алапаевск",
+            "county": "муниципальный округ Алапаевск",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "624605",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "57.8534242",
+            "57.8535242",
+            "61.7029306",
+            "61.7030306"
+          ]
+        }
+      ]
+    },
+    "1be698f58d08d978718159618b4286ad026f7dd9cfb3a7709948c769a8d554b3": {
+      "checked_at": "2026-10-28T05:36:25.925498+00:00",
+      "query": "Екатеринбург переулок Буторина 10",
+      "candidates": [
+        {
+          "place_id": 201076376,
+          "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+          "osm_type": "way",
+          "osm_id": 79975428,
+          "lat": "56.8271744",
+          "lon": "60.6423650",
+          "category": "building",
+          "type": "hospital",
+          "place_rank": 30,
+          "importance": 7.2487220569116e-05,
+          "addresstype": "building",
+          "name": "",
+          "display_name": "10, переулок Буторина, Парковый, Октябрьский район, Екатеринбург, городской округ Екатеринбург, Свердловская область, Уральский федеральный округ, 620100, Россия",
+          "address": {
+            "house_number": "10",
+            "road": "переулок Буторина",
+            "suburb": "Парковый",
+            "city_district": "Октябрьский район",
+            "city": "Екатеринбург",
+            "county": "городской округ Екатеринбург",
+            "state": "Свердловская область",
+            "ISO3166-2-lvl4": "RU-SVE",
+            "region": "Уральский федеральный округ",
+            "postcode": "620100",
+            "country": "Россия",
+            "country_code": "ru"
+          },
+          "boundingbox": [
+            "56.8266505",
+            "56.8277142",
+            "60.6416434",
+            "60.6427724"
+          ]
+        }
+      ]
+    }
+  }
+}
