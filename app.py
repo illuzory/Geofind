@@ -8,19 +8,29 @@ import altair as alt
 import pandas as pd
 import streamlit as st
 
+from geofind.addressing import AddressChecker
 from geofind.coverage import (
     COLORS,
     LABELS,
     analyze,
     load_boundary,
     make_grid,
+    sla_summary,
     zone_features,
 )
-from geofind.data import DataError, read_workbook, safe_csv
+from geofind.data import (
+    SERVICE_TYPES,
+    DataError,
+    read_workbook,
+    safe_csv,
+    write_workbook,
+)
+from geofind.imports import ImportStore, compare, display_time
 from geofind.mapview import build_map, fmt_time
 from geofind.routing import DemoRoadRouter, OSRMRouter, RoutingError
 
 ROOT = Path(__file__).resolve().parent
+STATE_DIR = Path(os.environ.get("GEOFIND_STATE_DIR", ROOT / ".cache/runtime"))
 st.set_page_config(page_title="Geofind · Урал", page_icon="🧭", layout="wide")
 st.markdown(
     """<style>
@@ -72,33 +82,213 @@ def calculate(mode, speed, url, version, services, sites, step, thresholds, dela
     )
 
 
+def address_panel(data, store):
+    with st.expander("Проверка адресов и координат", expanded=False):
+        st.caption(
+            "Проверяется соответствие города, улицы, дома и координат по OSM. Это не официальная проверка ФИАС/ГАР и не подтверждение размещения оборудования."
+        )
+        online = st.checkbox(
+            "Онлайн-проверка новых адресов",
+            value=False,
+            help="Новые адреса будут отправлены геокодеру; примеры можно проверить по сохранённым ответам без сети.",
+        )
+        refresh = st.checkbox(
+            "Повторно проверить известные адреса онлайн",
+            value=False,
+            disabled=not online,
+            help="Обходит сохранённые ответы и кэш; требует сетевого доступа к геокодеру.",
+        )
+        if st.button("Проверить адреса"):
+            try:
+                checker = AddressChecker(
+                    STATE_DIR / "addresses.sqlite",
+                    ROOT / "data/address_reference.json",
+                    os.environ.get(
+                        "GEOCODER_URL", "https://nominatim.openstreetmap.org"
+                    ),
+                )
+            except ValueError as exc:
+                st.error("Не удалось начать проверку адресов: " + str(exc))
+                return
+            rows = data.regional_sites.to_dict("records") + data.services.to_dict(
+                "records"
+            )
+            if online and len(rows) > 30:
+                st.error(
+                    "За один запуск онлайн-проверки — до 30 адресов. Для больших наборов используйте собственный геокодер."
+                )
+            else:
+                with st.spinner("Сверяем адреса и координаты…"):
+                    st.session_state.address_report = [
+                        checker.check(
+                            row, allow_network=online, force_refresh=online and refresh
+                        )
+                        for row in rows
+                    ]
+                    st.session_state.address_report_version = data.fingerprint
+        if st.session_state.get("address_report_version") == data.fingerprint:
+            report = st.session_state.address_report
+            table = pd.DataFrame(report)
+            table["checked_at"] = table["checked_at"].map(display_time)
+            confirmed = int((table.status == "verified").sum())
+            st.write(f"Согласованы адрес и координаты: {confirmed} из {len(table)}")
+            table["osm_link"] = table.apply(
+                lambda r: (
+                    f"https://www.openstreetmap.org/?mlat={r.suggested_latitude}&mlon={r.suggested_longitude}#map=18/{r.suggested_latitude}/{r.suggested_longitude}"
+                    if pd.notna(r.suggested_latitude)
+                    else None
+                ),
+                axis=1,
+            )
+            st.dataframe(
+                table[
+                    [
+                        "name",
+                        "address",
+                        "label",
+                        "reason",
+                        "distance_m",
+                        "matched_address",
+                        "source",
+                        "checked_at",
+                        "osm_link",
+                    ]
+                ],
+                hide_index=True,
+                width="stretch",
+                column_config={
+                    "osm_link": st.column_config.LinkColumn(
+                        "На карте OSM", display_text="Открыть"
+                    )
+                },
+            )
+            st.download_button(
+                "Скачать отчёт адресации",
+                safe_csv(table),
+                file_name="address_validation.csv",
+                mime="text/csv",
+            )
+            corrections = [r for r in report if r["status"] == "coordinate_mismatch"]
+            if corrections:
+                st.warning(
+                    "Обнаружено расхождение координат. Предложенные адреса и смещение показаны выше; координаты не меняются автоматически."
+                )
+                if st.button("Применить предложенные координаты"):
+                    sites = data.sites.copy()
+                    services = data.services.copy()
+                    for r in corrections:
+                        for frame in [sites, services]:
+                            frame.loc[
+                                frame.site_id == r["site_id"], ["latitude", "longitude"]
+                            ] = [r["suggested_latitude"], r["suggested_longitude"]]
+                    raw = write_workbook(data.equipment, sites, services)
+                    try:
+                        store.apply(
+                            raw,
+                            "address-correction.xlsx",
+                            expected_current=data.fingerprint,
+                        )
+                    except (DataError, ValueError) as exc:
+                        st.error(str(exc))
+                    else:
+                        st.session_state.active_content = raw
+                        st.session_state.recalculate_after_import = (
+                            st.session_state.get("auto_update_imports", True)
+                        )
+                        st.rerun()
+
+
 def main():
-    default = ROOT / "data/equipment_inventory_mvp.xlsx"
+    default = Path(
+        os.environ.get("GEOFIND_WORKBOOK", str(ROOT / "data/ural_inventory.xlsx"))
+    )
+    if not default.exists():
+        default = ROOT / "data/equipment_inventory_mvp.xlsx"
     if not default.exists():
         default = ROOT / "data/demo_inventory.xlsx"
+    store = ImportStore(STATE_DIR / "imports.sqlite")
+    persisted = store.active()
+    if persisted is None:
+        store.apply(default.read_bytes(), default.name)
+        persisted = store.active()
     if "active_content" not in st.session_state:
-        st.session_state.active_content = default.read_bytes()
+        st.session_state.active_content = persisted
     with st.sidebar:
         st.markdown("### Geofind")
         st.caption("Пилот · Свердловская область")
         uploaded = st.file_uploader(
             "Обновить таблицы",
             type=["xlsx"],
-            help="Одна книга с листами Equipment, Sites, Services",
+            help="Одна книга с листами Equipment, Sites, Services. Изменения применяются без перезапуска.",
         )
-        if st.button("Применить таблицу", disabled=uploaded is None, width="stretch"):
+        auto_update = st.checkbox(
+            "Пересчитывать после импорта", value=True, key="auto_update_imports"
+        )
+        current = parse(st.session_state.active_content)
+        candidate = None
+        if uploaded is not None:
             try:
-                candidate = uploaded.getvalue()
-                parse(candidate)
-                st.session_state.active_content = candidate
-                st.success("Данные обновлены")
+                candidate = parse(uploaded.getvalue())
+                diff = compare(current, candidate)
+                st.caption(
+                    f"Изменено площадок: {diff['sites_changed']}; добавлено: {diff['sites_added']}; удалено: {diff['sites_removed']}; устройств: {diff['equipment_delta']:+d}"
+                )
+                if diff["details"]:
+                    with st.expander("Предпросмотр изменений"):
+                        st.dataframe(pd.DataFrame(diff["details"]), hide_index=True)
             except (DataError, ValueError) as exc:
                 st.error(str(exc))
-                st.caption("Сохранён предыдущий корректный набор.")
+                st.caption("Текущая версия не изменена.")
+        if st.button(
+            "Применить таблицу",
+            disabled=candidate is None or candidate.fingerprint == current.fingerprint,
+            width="stretch",
+        ):
+            try:
+                raw = uploaded.getvalue()
+                store.apply(raw, uploaded.name, expected_current=current.fingerprint)
+                st.session_state.last_import_diff = compare(current, candidate)
+                st.session_state.active_content = raw
+                st.session_state.recalculate_after_import = auto_update
+                st.session_state.import_notice = "Данные обновлены"
+                st.rerun()
+            except (DataError, ValueError) as exc:
+                st.error(str(exc))
+        if st.session_state.get("import_notice"):
+            st.success(st.session_state.pop("import_notice"))
+        if (
+            candidate is not None
+            and candidate.fingerprint
+            == parse(st.session_state.active_content).fingerprint
+        ):
+            st.caption("Эта версия книги уже активна.")
+        with st.expander("Версии и восстановление"):
+            history = store.history()
+            selected_version = st.selectbox(
+                "Сохранённая версия",
+                [r["id"] for r in history],
+                format_func=lambda key: next(
+                    r["filename"] + " · " + display_time(r["created_at"])
+                    for r in history
+                    if r["id"] == key
+                ),
+            )
+            if st.button("Восстановить выбранную версию"):
+                store.activate(selected_version)
+                st.session_state.active_content = store.active()
+                st.session_state.recalculate_after_import = auto_update
+                st.rerun()
+            if st.button("Обновить из хранилища"):
+                st.session_state.active_content = store.active()
+                st.session_state.recalculate_after_import = auto_update
+                st.rerun()
+            st.caption(
+                "Набор сохраняется на сервере. При параллельном импорте устаревшая версия не перезапишет новую."
+            )
         st.download_button(
             "Скачать текущую книгу",
             st.session_state.active_content,
-            file_name="equipment_inventory_mvp.xlsx",
+            file_name="ural_inventory.xlsx",
             mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
             width="stretch",
         )
@@ -179,6 +369,8 @@ def main():
         row["name"] = "Инженеры · " + name
         row["address"] = "Условная дополнительная точка для сравнения сценариев"
         row["is_demo"] = True
+        row["service_type"] = "standard"
+        row["approval_note"] = ""
         services = pd.concat([services, pd.DataFrame([row])], ignore_index=True)
     st.markdown(
         '<div class="eyebrow">GEOFIND / SERVICE REACH</div>', unsafe_allow_html=True
@@ -188,6 +380,12 @@ def main():
         '<div class="subtle">Свердловская область · площадки, инженеры и доступность по SLA</div>',
         unsafe_allow_html=True,
     )
+    address_panel(data, store)
+    if st.session_state.get("last_import_diff"):
+        difference = st.session_state.last_import_diff
+        st.caption(
+            f"Последний импорт: изменено {difference['sites_changed']} площадок; устройств {difference['equipment_delta']:+d}. Версия {data.fingerprint[:8]}"
+        )
     if not green < yellow < red:
         st.error("Пороги должны возрастать: SLA < риск < критично.")
         return
@@ -199,16 +397,17 @@ def main():
         return
     if mode == "demo":
         st.info(
-            "Демонстрация: координаты условные, время — модельная оценка по обобщённой дорожной сети. Это не подтверждённое время поездки."
+            "Демонстрационные площадки по выбранным адресам. Время — модельная оценка по обобщённой дорожной сети, не подтверждённое время поездки."
         )
     else:
         st.info(
-            "OSRM: время по автомобильному графу. Координаты MVP остаются условными; текущие пробки не учитываются."
+            "OSRM: время по автомобильному графу. Адреса выбраны для MVP, размещение оборудования там не подтверждено; текущие пробки не учитываются."
         )
     url = os.environ.get("OSRM_URL", "http://127.0.0.1:5000")
     version = os.environ.get("OSRM_DATA_VERSION") or os.environ.get(
         "OSRM_CACHE_NAMESPACE", ""
     )
+    recalculate = st.session_state.pop("recalculate_after_import", False)
     if mode == "osrm":
         signature = hashlib.sha256(
             repr(
@@ -224,7 +423,7 @@ def main():
                 )
             ).encode()
         ).hexdigest()
-        if st.button("Рассчитать дорожный сценарий", type="primary"):
+        if st.button("Рассчитать дорожный сценарий", type="primary") or recalculate:
             st.session_state.osrm_signature = signature
         if st.session_state.get("osrm_signature") != signature:
             st.caption(
@@ -250,9 +449,10 @@ def main():
     counts = data.equipment["Site Name"].value_counts()
     results["equipment"] = results.name.map(counts).fillna(0).astype(int)
     reached = results.total_seconds.notna()
-    ok = int((results.status == "ok").sum())
-    maximum = results.total_seconds.max()
-    cols = st.columns(4)
+    summary = sla_summary(results)
+    ok = summary["within_sla"]
+    maximum = summary["maximum_seconds"]
+    cols = st.columns(5)
     cols[0].metric(
         "Площадки региона",
         len(results),
@@ -261,13 +461,15 @@ def main():
     )
     cols[1].metric(
         "В SLA",
-        f"{ok} из {len(results)}",
-        f"{ok / len(results):.0%} площадок",
+        f"{ok} из {summary['eligible']}" if summary["eligible"] else "Не применяется",
+        f"{summary['percentage']:.0%} площадок общего SLA"
+        if summary["eligible"]
+        else "Нет площадок общего SLA",
         delta_color="off",
     )
     cols[2].metric(
-        "Максимум до прибытия",
-        fmt_time(maximum),
+        "Максимум общего SLA",
+        fmt_time(maximum) if summary["eligible"] else "Не применяется",
         f"Подготовка: {delay} мин",
         delta_color="off",
     )
@@ -275,6 +477,12 @@ def main():
         "Оборудование в регионе",
         int(results.equipment.sum()),
         f"{len(data.equipment)} во всей книге",
+        delta_color="off",
+    )
+    cols[4].metric(
+        "По согласованию",
+        summary["approval_required"],
+        "Исключены из общего SLA",
         delta_color="off",
     )
     if not reached.all():
@@ -290,9 +498,10 @@ def main():
             base, _, _, _ = calculate(
                 mode, speed, url, version, base_services, sites, step, thresholds, delay
             )
-            base_ok = int((base.status == "ok").sum())
+            base_summary = sla_summary(base)
+            base_ok = base_summary["within_sla"]
             st.success(
-                f"Сравнение с основными сервисами: в SLA было {base_ok} из {len(base)}, стало {ok} из {len(results)}."
+                f"Сравнение с основными сервисами: в SLA было {base_ok} из {base_summary['eligible']}, стало {ok} из {summary['eligible']}. По согласованию: {summary['approval_required']} отдельно."
             )
         except (RoutingError, ValueError):
             st.caption(
@@ -316,6 +525,12 @@ def main():
             st.metric("Дорога", fmt_time(record.drive_seconds))
             st.metric("С подготовкой", fmt_time(record.total_seconds))
             st.write(record.service or "Сервис не назначен")
+            st.caption(record.address)
+            if not record.sla_eligible:
+                st.info(
+                    "Выезд требует согласования и не учитывается в общем SLA. Показано только время дороги и подготовки, срок согласования не оценивается. "
+                    + str(record.get("approval_note", ""))
+                )
             st.caption(
                 "Синяя линия — путь от инженеров к площадке. Номер у маркера обозначает сервисную точку."
             )
@@ -360,6 +575,7 @@ def main():
                     ("critical", f"{yellow:g}–{red:g} ч"),
                     ("outside", f"> {red:g} ч"),
                     ("no_route", "Нет расчёта"),
+                    ("approval_required", "По согласованию"),
                 ]
             )
             st.markdown(
@@ -373,13 +589,25 @@ def main():
         if route:
             st.caption(route.note)
         table = results[
-            ["name", "service", "drive_seconds", "total_seconds", "status", "equipment"]
+            [
+                "name",
+                "address",
+                "service_type",
+                "service",
+                "drive_seconds",
+                "total_seconds",
+                "status",
+                "equipment",
+            ]
         ].copy()
         table["drive_seconds"] = table.drive_seconds.map(fmt_time)
         table["total_seconds"] = table.total_seconds.map(fmt_time)
         table["status"] = table.status.map(LABELS)
+        table["service_type"] = table.service_type.map(SERVICE_TYPES)
         table.columns = [
             "Площадка",
+            "Полный адрес",
+            "Тип площадки",
             "Сервис",
             "Дорога",
             "До прибытия",
@@ -391,6 +619,11 @@ def main():
             [
                 "site_id",
                 "name",
+                "address",
+                "service_type",
+                "sla_eligible",
+                "approval_note",
+                "routing_status",
                 "latitude",
                 "longitude",
                 "service_id",
@@ -458,9 +691,9 @@ def main():
 
 **OSRM.** Подключение задаётся через `OSRM_URL` и `OSRM_DATA_VERSION` (версия своего графа) либо `OSRM_CACHE_NAMESPACE` (идентификатор наблюдения публичного demo). Публичный сервер не сообщает версию графа и не гарантирует стабильность; запросы ограничены одним в секунду. Нужен граф области и соседних дорог; привязка ограничена 3 км и проверяется по возвращённому расстоянию для каждой точки отдельно. Кэш учитывает граф, профиль, координаты и направление. Ошибки API останавливают расчёт и не превращаются в «нет пути».
 
-**Обновление.** Скачайте книгу, измените листы Equipment, Sites, Services и загрузите её слева. Только валидная книга заменит текущие данные. Изменение оборудования не меняет дорожные времена. Уникальные названия связывают оборудование с площадками. Координаты этой версии выбраны для демонстрации; адрес на Буторина не геокодирован.
+**Обновление.** Скачайте книгу, измените листы Equipment, Sites, Services и загрузите её слева. Только валидная книга заменит текущие данные. Изменение оборудования не меняет дорожные времена. Site ID стабильно связывает импортируемые версии; имена оборудования и площадок должны совпадать. Версии сохраняются в SQLite и могут быть восстановлены. Адреса новых примеров найдены в OSM, однако оборудование в этих домах остаётся демонстрационным; проверка не подтверждает его фактическое размещение.
 
-**SLA.** По умолчанию 4/6/8 часов до прибытия; учитывается заданная подготовка. Пробки, погода, ремонт, графики и загрузка инженеров не моделируются.
+**SLA.** Площадки approval_required показываются отдельно и исключаются из числителя, знаменателя и максимума общего SLA, даже при коротком времени дороги. Ожидание согласования не рассчитывается. По умолчанию 4/6/8 часов до прибытия; учитывается заданная подготовка. Пробки, погода, ремонт, графики и загрузка инженеров не моделируются.
 
 **Ресурсы.** Один регион, до 10 сервисов, 2000 площадок и 10000 ячеек; граф не загружается на всю Россию. Таблицы ограничены 50000 строк и 10 МБ на XLSX. Карта и её скрипты работают без внешней подложки.
 """)

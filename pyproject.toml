@@ -1,6 +1,6 @@
 [project]
 name = "geofind"
-version = "0.1.0"
+version = "0.3.0"
 description = "Региональный MVP анализа доезда выездного сервиса"
 requires-python = ">=3.12"
 dependencies = [

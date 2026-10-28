@@ -115,13 +115,22 @@ def build_map(
             z_index_offset=1000,
         ).add_to(service_layer)
     service_layer.add_to(m)
-    clients = folium.FeatureGroup(name="Площадки", show=True)
+    clients = {
+        "standard": folium.FeatureGroup(name="Площадки общего SLA", show=True),
+        "approval_required": folium.FeatureGroup(
+            name="Выезд по согласованию", show=True
+        ),
+    }
     for row in sites.to_dict("records"):
         records = equipment[equipment["Site Name"] == row["name"]]
         types = records["Device Type"].value_counts()
         details = ", ".join(f"{_text(str(k))}: {v}" for k, v in types.items())
         service = row.get("service") or "Не назначен"
-        popup = f"<b>{_text(row['name'])}</b><br>{_text(LABELS[row['status']])} · <b>{fmt_time(row.get('total_seconds'))}</b><br>Сервис: {_text(service)}<br>Оборудование: {len(records)}<br><small>{details}</small><br><small>Координаты: условная площадка MVP</small>"
+        popup = f"<b>{_text(row['name'])}</b><br>{_text(row.get('address', ''))}<br>{_text(LABELS[row['status']])} · <b>{fmt_time(row.get('total_seconds'))}</b><br>Сервис: {_text(service)}<br>Оборудование: {len(records)}<br><small>{details}</small><br><small>Площадка MVP: размещение оборудования по адресу не подтверждено</small>"
+        if row.get("service_type") == "approval_required":
+            popup += "<br><b>Не входит в общий SLA</b><br>" + _text(
+                row.get("approval_note", "")
+            )
         folium.CircleMarker(
             [row["latitude"], row["longitude"]],
             radius=10 if row["site_id"] == selected else 7,
@@ -130,6 +139,9 @@ def build_map(
             fill=True,
             fill_color=COLORS[row["status"]],
             fill_opacity=1,
+            dash_array="3,3"
+            if row.get("service_type") == "approval_required"
+            else None,
             tooltip=folium.Tooltip(
                 _text(row["name"]),
                 permanent=True,
@@ -139,8 +151,9 @@ def build_map(
                 sticky=False,
             ),
             popup=folium.Popup(popup, max_width=340),
-        ).add_to(clients)
-    clients.add_to(m)
+        ).add_to(clients[row.get("service_type", "standard")])
+    for layer in clients.values():
+        layer.add_to(m)
     if route:
         folium.PolyLine(
             [[lat, lon] for lon, lat in route.coordinates],

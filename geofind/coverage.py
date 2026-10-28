@@ -17,6 +17,7 @@ COLORS = {
     "outside": "#98627d",
     "no_route": "#8995a5",
     "off_network": "#8995a5",
+    "approval_required": "#7652b0",
 }
 LABELS = {
     "ok": "В SLA",
@@ -25,6 +26,7 @@ LABELS = {
     "outside": "За пределами SLA",
     "no_route": "Нет пути в графе",
     "off_network": "Нет допустимой привязки к дороге",
+    "approval_required": "Выезд по согласованию",
 }
 
 
@@ -142,6 +144,11 @@ def analyze(router, services, sites, grid, thresholds=(4, 6, 8), dispatch_minute
     sites_result = sites.reset_index(drop=True).join(
         pd.DataFrame(assignments[: len(sites)])
     )
+    sites_result["routing_status"] = sites_result["status"]
+    if "service_type" not in sites_result:
+        sites_result["service_type"] = "standard"
+    sites_result["sla_eligible"] = sites_result.service_type.eq("standard")
+    sites_result.loc[~sites_result.sla_eligible, "status"] = "approval_required"
     return sites_result, assignments[len(sites) :]
 
 
@@ -171,3 +178,18 @@ def zone_features(grid, assignments):
             }
         )
     return {"type": "FeatureCollection", "features": features}
+
+
+def sla_summary(results):
+    eligible = results[results.sla_eligible] if "sla_eligible" in results else results
+    counted = int((eligible.status == "ok").sum())
+    maximum = eligible.total_seconds.max() if len(eligible) else None
+    return {
+        "total": len(results),
+        "eligible": len(eligible),
+        "approval_required": len(results) - len(eligible),
+        "within_sla": counted,
+        "percentage": counted / len(eligible) if len(eligible) else None,
+        "maximum_seconds": maximum,
+        "unrouted": int(eligible.total_seconds.isna().sum()),
+    }

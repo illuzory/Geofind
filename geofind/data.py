@@ -23,6 +23,7 @@ SITE_COLUMNS = [
     "address",
     "is_demo",
 ]
+SERVICE_TYPES = {"standard": "Общий SLA", "approval_required": "Выезд по согласованию"}
 MAX_ROWS = 50000
 
 
@@ -46,9 +47,22 @@ def _locations(df, label):
     missing = set(SITE_COLUMNS) - set(df.columns)
     if missing:
         raise DataError(f"{label}: отсутствуют столбцы {', '.join(sorted(missing))}")
-    df = df.copy()
+    df = df.drop(
+        columns=[
+            "service_id",
+            "service",
+            "drive_seconds",
+            "total_seconds",
+            "status",
+            "routing_status",
+            "sla_eligible",
+            "address_status",
+            "address_verified",
+        ],
+        errors="ignore",
+    ).copy()
     for col in ["site_id", "name", "region"]:
-        df[col] = df[col].fillna("").astype(str).str.strip()
+        df[col] = df[col].astype("string").fillna("").astype(str).str.strip()
         if df[col].eq("").any():
             raise DataError(f"{label}: пустое поле {col}")
     if df.site_id.duplicated().any() or df.name.duplicated().any():
@@ -57,7 +71,7 @@ def _locations(df, label):
         df[col] = pd.to_numeric(df[col], errors="coerce")
         if not df[col].between(low, high).all():
             raise DataError(f"{label}: некорректные координаты {col}")
-    df["address"] = df.address.fillna("").astype(str)
+    df["address"] = df.address.astype("string").fillna("").astype(str)
     bools = {
         "true": True,
         "false": False,
@@ -69,6 +83,34 @@ def _locations(df, label):
     df["is_demo"] = df.is_demo.astype(str).str.strip().str.lower().map(bools)
     if df.is_demo.isna().any():
         raise DataError(f"{label}: is_demo должен быть true/false")
+    if "service_type" not in df:
+        df["service_type"] = "standard"
+    aliases = {
+        "standard": "standard",
+        "approval_required": "approval_required",
+        "общий sla": "standard",
+        "обычная": "standard",
+        "выезд по согласованию": "approval_required",
+        "по согласованию": "approval_required",
+    }
+    df["service_type"] = (
+        df.service_type.fillna("").astype(str).str.strip().str.lower().map(aliases)
+    )
+    if df.service_type.isna().any():
+        raise DataError(
+            f"{label}: неизвестный service_type; используйте standard или approval_required"
+        )
+    for field in ["city", "street", "house", "postal_code", "approval_note"]:
+        df[field] = (
+            df[field].astype("string").fillna("").astype(str).str.strip()
+            if field in df
+            else ""
+        )
+    df["country"] = (
+        df["country"].fillna("Россия").astype(str).str.strip()
+        if "country" in df
+        else "Россия"
+    )
     return df
 
 
@@ -84,7 +126,7 @@ def validate(equipment, sites, services, fingerprint="manual"):
         )
     eq = equipment.copy()
     for col in EQUIPMENT_COLUMNS:
-        eq[col] = eq[col].fillna("").astype(str).str.strip()
+        eq[col] = eq[col].astype("string").fillna("").astype(str).str.strip()
         if eq[col].eq("").any():
             raise DataError(f"Оборудование: пустое поле {col}")
     if eq["Serial Number"].duplicated().any():
@@ -93,6 +135,18 @@ def validate(equipment, sites, services, fingerprint="manual"):
         raise DataError("Повтор устройства внутри площадки")
     sites = _locations(sites, "Sites")
     services = _locations(services, "Services")
+    if (services.service_type == "approval_required").any():
+        raise DataError(
+            "Сервисная точка не может иметь тип approval_required: согласование относится к обслуживаемой площадке"
+        )
+    if "Site ID" in eq.columns:
+        ids = eq["Site ID"].astype("string").fillna("").astype(str).str.strip()
+        known = sites.set_index("site_id")["name"].to_dict()
+        if any(
+            sid not in known or known[sid] != name
+            for sid, name in zip(ids, eq["Site Name"])
+        ):
+            raise DataError("Site ID оборудования не соответствует имени площадки")
     if not len(services):
         raise DataError("Нужна хотя бы одна сервисная точка")
     if set(sites.site_id) & set(services.site_id):
@@ -139,7 +193,17 @@ def read_workbook(content):
                     "Нужны листы Equipment, Sites, Services. Скачайте шаблон в приложении."
                 )
             sheets = {
-                name: pd.read_excel(book, sheet_name=name, nrows=MAX_ROWS + 1)
+                name: pd.read_excel(
+                    book,
+                    sheet_name=name,
+                    nrows=MAX_ROWS + 1,
+                    dtype={
+                        "postal_code": str,
+                        "house": str,
+                        "site_id": str,
+                        "Site ID": str,
+                    },
+                )
                 for name in required
             }
     except DataError:
@@ -168,6 +232,23 @@ def write_workbook(equipment, sites, services, notes=None):
                 writer, sheet_name="Readme", index=False
             )
         for sheet in writer.book:
+            if sheet.title == "Sites" and "service_type" in sites.columns:
+                from openpyxl.utils import get_column_letter
+                from openpyxl.worksheet.datavalidation import DataValidation
+
+                validation = DataValidation(
+                    type="list",
+                    formula1='"standard,approval_required"',
+                    allow_blank=False,
+                )
+                validation.errorTitle = "Тип площадки"
+                validation.error = "Выберите standard или approval_required"
+                validation.showErrorMessage = True
+                sheet.add_data_validation(validation)
+                letter = get_column_letter(
+                    list(sites.columns).index("service_type") + 1
+                )
+                validation.add(f"{letter}2:{letter}{max(2, len(sites) + 1)}")
             sheet.freeze_panes = "A2"
             sheet.auto_filter.ref = sheet.dimensions
             for column in sheet.columns:
